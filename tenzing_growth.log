@@ -1,0 +1,16 @@
+2026-06-21 12:58:05,607 - __main__ - ERROR - Scanning error: BrowserType.launch_persistent_context: Executable doesn't exist at /Users/amangupta/Library/Caches/ms-playwright/chromium-1223/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+2026-06-21 13:00:08,223 - src.scanner - INFO - Scanning group: https://www.facebook.com/share/g/1Ecjsux1RH/
+2026-06-21 13:00:37,108 - src.scanner - INFO - Scanning group: https://www.facebook.com/share/g/1Ecjsux1RH/
+2026-06-21 13:00:47,302 - src.scanner - INFO - Analyzing post from Unknown
+2026-06-21 13:01:48,595 - src.scanner - INFO - Scanning group: https://www.facebook.com/share/g/1Ecjsux1RH/
+2026-06-21 13:01:57,482 - src.scanner - INFO - Analyzing post from Unknown
+2026-06-21 13:03:44,998 - src.scanner - INFO - Scanning group: https://www.facebook.com/share/g/1Ecjsux1RH/
+2026-06-21 13:03:54,244 - src.scanner - INFO - Analyzing post from Unknown

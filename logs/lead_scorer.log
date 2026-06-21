@@ -1,0 +1,1 @@
+2026-06-21 13:38:56,454 - lead_scorer - ERROR - Error generating content: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)

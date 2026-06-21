@@ -1,0 +1,11 @@
+2026-06-21 13:23:47,328 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 13:23:47,328 - comment_worker - INFO - Comment Worker initialized
+2026-06-21 13:23:47,333 - comment_worker - INFO - Comment Worker started
+2026-06-21 13:23:47,333 - comment_worker - INFO - Comment Worker is running. Press Ctrl+C to stop.
+2026-06-21 13:23:47,333 - comment_worker - INFO - Comment Worker is running. Press Ctrl+C to stop.
+2026-06-21 13:35:35,465 - comment_worker - INFO - Comment Worker initialized
+2026-06-21 13:35:35,470 - comment_worker - INFO - Comment Worker started
+2026-06-21 13:35:35,471 - comment_worker - INFO - Comment Worker is running. Press Ctrl+C to stop.
+2026-06-21 13:37:58,519 - comment_worker - INFO - Comment Worker initialized
+2026-06-21 13:37:58,527 - comment_worker - INFO - Comment Worker started
+2026-06-21 13:37:58,533 - comment_worker - INFO - Comment Worker is running. Press Ctrl+C to stop.

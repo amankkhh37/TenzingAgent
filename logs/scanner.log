@@ -1,0 +1,56 @@
+2026-06-21 13:32:23,172 - scanner - INFO - Facebook Scanner initialized
+2026-06-21 13:32:23,176 - scanner - INFO - Scanner started
+2026-06-21 13:32:23,177 - scanner - INFO - Scanner is running. Press Ctrl+C to stop.
+2026-06-21 13:32:23,177 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 13:32:23,850 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/14n8ihzCBsa/
+2026-06-21 13:33:23,855 - scanner - ERROR - Error scanning group https://www.facebook.com/share/g/14n8ihzCBsa/: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.facebook.com/share/g/14n8ihzCBsa/", waiting until "networkidle"
+
+2026-06-21 13:33:23,959 - scanner - INFO - Scan complete, sleeping for 300 seconds
+2026-06-21 13:35:35,509 - scanner - INFO - Facebook Scanner initialized
+2026-06-21 13:35:35,513 - scanner - INFO - Scanner started
+2026-06-21 13:35:35,513 - scanner - INFO - Scanner is running. Press Ctrl+C to stop.
+2026-06-21 13:35:35,514 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 13:35:36,187 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/14n8ihzCBsa/
+2026-06-21 13:35:42,897 - scanner - ERROR - Error scanning group https://www.facebook.com/share/g/14n8ihzCBsa/: Instance <Group at 0x107b13110> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 13:35:42,977 - scanner - INFO - Scan complete, sleeping for 300 seconds
+2026-06-21 13:37:58,570 - scanner - INFO - Facebook Scanner initialized
+2026-06-21 13:37:58,574 - scanner - INFO - Scanner started
+2026-06-21 13:37:58,575 - scanner - INFO - Scanner is running. Press Ctrl+C to stop.
+2026-06-21 13:37:58,576 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 13:37:59,255 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/14n8ihzCBsa/
+2026-06-21 13:38:07,023 - scanner - ERROR - Error scanning group https://www.facebook.com/share/g/14n8ihzCBsa/: Instance <Group at 0x1079fb110> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 13:38:07,116 - scanner - INFO - Scan complete, sleeping for 300 seconds
+2026-06-21 13:43:07,129 - scanner - INFO - Starting scan of 3 groups
+2026-06-21 13:43:08,420 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/14n8ihzCBsa/
+2026-06-21 13:43:14,953 - scanner - ERROR - Error scanning group https://www.facebook.com/share/g/14n8ihzCBsa/: Instance <Group at 0x1079571d0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 13:43:14,953 - scanner - INFO - Scanning group: https://facebook.com/groups/test456
+2026-06-21 13:43:18,177 - scanner - ERROR - Error scanning group https://facebook.com/groups/test456: Instance <Group at 0x107da4c00> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 13:43:18,177 - scanner - INFO - Scanning group: https://facebook.com/groups/test123
+2026-06-21 13:43:23,966 - scanner - ERROR - Error scanning group https://facebook.com/groups/test123: Instance <Group at 0x107da5590> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 13:43:24,076 - scanner - INFO - Scan complete, sleeping for 300 seconds
+2026-06-21 13:48:24,081 - scanner - INFO - Starting scan of 3 groups
+2026-06-21 13:48:24,739 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/14n8ihzCBsa/
+2026-06-21 13:48:31,742 - scanner - ERROR - Error scanning group https://www.facebook.com/share/g/14n8ihzCBsa/: Instance <Group at 0x1079e2030> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 13:48:31,743 - scanner - INFO - Scanning group: https://facebook.com/groups/test456
+2026-06-21 13:48:34,344 - scanner - ERROR - Error scanning group https://facebook.com/groups/test456: Instance <Group at 0x107cc8670> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 13:48:34,345 - scanner - INFO - Scanning group: https://facebook.com/groups/test123
+2026-06-21 13:48:37,016 - scanner - ERROR - Error scanning group https://facebook.com/groups/test123: Instance <Group at 0x107ccab30> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 13:48:37,101 - scanner - INFO - Scan complete, sleeping for 300 seconds
+2026-06-21 13:53:37,109 - scanner - INFO - Starting scan of 3 groups
+2026-06-21 13:53:38,683 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/14n8ihzCBsa/
+2026-06-21 13:53:45,713 - scanner - ERROR - Error scanning group https://www.facebook.com/share/g/14n8ihzCBsa/: Instance <Group at 0x107c768e0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 13:53:45,713 - scanner - INFO - Scanning group: https://facebook.com/groups/test456
+2026-06-21 13:53:50,490 - scanner - ERROR - Error scanning group https://facebook.com/groups/test456: Instance <Group at 0x107aaa620> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 13:53:50,490 - scanner - INFO - Scanning group: https://facebook.com/groups/test123
+2026-06-21 13:53:53,187 - scanner - ERROR - Error scanning group https://facebook.com/groups/test123: Instance <Group at 0x107aaa0a0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 13:53:53,387 - scanner - INFO - Scan complete, sleeping for 300 seconds
+2026-06-21 13:58:53,397 - scanner - INFO - Starting scan of 3 groups
+2026-06-21 13:58:54,778 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/14n8ihzCBsa/
+2026-06-21 13:59:00,873 - scanner - ERROR - Error scanning group https://www.facebook.com/share/g/14n8ihzCBsa/: Instance <Group at 0x107aaa620> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 13:59:00,873 - scanner - INFO - Scanning group: https://facebook.com/groups/test456
+2026-06-21 13:59:04,526 - scanner - ERROR - Error scanning group https://facebook.com/groups/test456: Instance <Group at 0x107def1d0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 13:59:04,526 - scanner - INFO - Scanning group: https://facebook.com/groups/test123
+2026-06-21 13:59:09,880 - scanner - ERROR - Error scanning group https://facebook.com/groups/test123: Instance <Group at 0x107c76db0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 13:59:09,973 - scanner - INFO - Scan complete, sleeping for 300 seconds
