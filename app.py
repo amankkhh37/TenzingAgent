@@ -219,7 +219,14 @@ with tabs[0]:
 # Tab 2: New Leads
 with tabs[1]:
     st.subheader("🆕 New Leads Awaiting Review")
-    
+    st.write("DEBUG")
+
+    new_leads = LeadDatabase.get_leads_by_status("NEW")
+
+    st.write(f"Retrieved {len(new_leads)} NEW leads")
+
+    if len(new_leads) > 0:
+        st.write(new_leads[0].id)
     new_leads = LeadDatabase.get_leads_by_status("NEW")
     
     if new_leads:

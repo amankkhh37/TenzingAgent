@@ -1,1 +1,57 @@
 2026-06-21 13:38:56,454 - lead_scorer - ERROR - Error generating content: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2026-06-21 14:34:14,930 - lead_scorer - ERROR - Cannot connect to Ollama: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/tags (Caused by NewConnectionError("HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-06-21 14:39:25,492 - lead_scorer - ERROR - Cannot connect to Ollama: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/tags (Caused by NewConnectionError("HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-06-21 14:43:47,522 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:43:47,536 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:43:50,568 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:43:50,578 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:43:53,626 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:43:53,641 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:44:05,803 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:44:05,815 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:44:08,857 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:44:08,868 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:44:11,893 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:44:11,902 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:44:48,346 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:44:48,358 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:44:51,395 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:44:51,408 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:44:54,458 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:44:54,471 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:44:57,522 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:44:57,536 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:45:09,689 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:45:09,705 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:45:12,744 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:45:12,756 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:45:15,788 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:45:15,802 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:45:55,807 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:45:55,820 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:45:58,868 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:45:58,882 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:46:01,911 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:46:01,922 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:46:14,081 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:46:14,096 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:46:17,144 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:46:17,159 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:46:20,193 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:46:20,203 - lead_scorer - ERROR - Cannot connect to Ollama
+2026-06-21 14:47:12,666 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Cab
+2026-06-21 14:48:07,513 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Package
+2026-06-21 14:49:30,674 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Cab
+2026-06-21 14:50:20,358 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Package
+2026-06-21 14:51:32,256 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Cab
+2026-06-21 14:52:27,420 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Package
+2026-06-21 14:53:43,526 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Cab
+2026-06-21 14:54:31,582 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Package
+2026-06-21 14:55:45,346 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Cab
+2026-06-21 14:56:35,159 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Package
+2026-06-21 14:57:46,573 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Cab
+2026-06-21 14:58:36,377 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Package
+2026-06-21 15:16:03,925 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Cab
+2026-06-21 15:16:33,930 - lead_scorer - ERROR - Error generating reply: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2026-06-21 15:17:02,689 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Package
+2026-06-21 15:17:32,694 - lead_scorer - ERROR - Error generating reply: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)

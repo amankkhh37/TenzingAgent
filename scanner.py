@@ -229,8 +229,8 @@ class FacebookScanner:
                 # Scroll for more posts
                 if scroll_count < MAX_SCROLLS - 1:
                     try:
-                        page.mouse.wheel(0, 3000)
-                        time.sleep(2)
+                        page.mouse.wheel(0, 800)
+                        time.sleep(3)
                     except:
                         break
             

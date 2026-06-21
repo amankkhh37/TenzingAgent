@@ -54,3 +54,96 @@ Call log:
 2026-06-21 13:59:04,526 - scanner - INFO - Scanning group: https://facebook.com/groups/test123
 2026-06-21 13:59:09,880 - scanner - ERROR - Error scanning group https://facebook.com/groups/test123: Instance <Group at 0x107c76db0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
 2026-06-21 13:59:09,973 - scanner - INFO - Scan complete, sleeping for 300 seconds
+2026-06-21 14:04:09,977 - scanner - INFO - Starting scan of 3 groups
+2026-06-21 14:04:11,456 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/14n8ihzCBsa/
+2026-06-21 14:04:18,473 - scanner - ERROR - Error scanning group https://www.facebook.com/share/g/14n8ihzCBsa/: Instance <Group at 0x107c76c50> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 14:04:18,473 - scanner - INFO - Scanning group: https://facebook.com/groups/test456
+2026-06-21 14:04:24,137 - scanner - ERROR - Error scanning group https://facebook.com/groups/test456: Instance <Group at 0x107e57330> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 14:04:24,137 - scanner - INFO - Scanning group: https://facebook.com/groups/test123
+2026-06-21 14:04:29,600 - scanner - ERROR - Error scanning group https://facebook.com/groups/test123: Instance <Group at 0x107e57750> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-21 14:04:29,703 - scanner - INFO - Scan complete, sleeping for 300 seconds
+2026-06-21 14:34:14,931 - scanner - INFO - Facebook Scanner initialized
+2026-06-21 14:34:14,936 - scanner - INFO - Scanner started
+2026-06-21 14:34:14,936 - scanner - INFO - Scanner is running. Press Ctrl+C to stop.
+2026-06-21 14:34:14,937 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 14:34:16,074 - scanner - INFO - Scanning group: https://facebook.com/groups/travel_kolkata
+2026-06-21 14:34:47,496 - scanner - INFO - Group 'Notifications': 0 posts, 0 leads found
+2026-06-21 14:34:47,574 - scanner - INFO - Scan complete, sleeping for 300 seconds
+2026-06-21 14:39:25,493 - scanner - INFO - Facebook Scanner initialized
+2026-06-21 14:39:25,498 - scanner - INFO - Scanner started
+2026-06-21 14:39:25,498 - scanner - INFO - Scanner is running. Press Ctrl+C to stop.
+2026-06-21 14:39:25,499 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 14:39:26,215 - scanner - INFO - Scanning group: https://facebook.com/groups/travel_kolkata
+2026-06-21 14:39:59,080 - scanner - INFO - Group 'Notifications': 0 posts, 0 leads found
+2026-06-21 14:39:59,171 - scanner - INFO - Scan complete, sleeping for 30 seconds
+2026-06-21 14:40:29,179 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 14:40:29,864 - scanner - INFO - Scanning group: https://facebook.com/groups/travel_kolkata
+2026-06-21 14:41:01,596 - scanner - INFO - Group 'Notifications': 0 posts, 0 leads found
+2026-06-21 14:41:01,692 - scanner - INFO - Scan complete, sleeping for 30 seconds
+2026-06-21 14:41:31,700 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 14:41:32,383 - scanner - INFO - Scanning group: https://facebook.com/groups/travel_kolkata
+2026-06-21 14:42:05,046 - scanner - INFO - Group 'Notifications': 0 posts, 0 leads found
+2026-06-21 14:42:05,135 - scanner - INFO - Scan complete, sleeping for 30 seconds
+2026-06-21 14:42:35,142 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 14:42:35,844 - scanner - INFO - Scanning group: https://facebook.com/groups/travel_kolkata
+2026-06-21 14:43:08,764 - scanner - INFO - Group 'Notifications': 0 posts, 0 leads found
+2026-06-21 14:43:08,848 - scanner - INFO - Scan complete, sleeping for 30 seconds
+2026-06-21 14:43:38,855 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 14:43:39,565 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1HA2D3iTXF/
+2026-06-21 14:44:11,911 - scanner - INFO - Group 'Tour & Travel from Kolkata': 12 posts, 0 leads found
+2026-06-21 14:44:12,000 - scanner - INFO - Scan complete, sleeping for 30 seconds
+2026-06-21 14:44:42,008 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 14:44:42,712 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1HA2D3iTXF/
+2026-06-21 14:45:15,818 - scanner - INFO - Group 'Tour & Travel from Kolkata': 14 posts, 0 leads found
+2026-06-21 14:45:15,887 - scanner - INFO - Scan complete, sleeping for 30 seconds
+2026-06-21 14:45:45,896 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 14:45:46,590 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1HA2D3iTXF/
+2026-06-21 14:46:20,213 - scanner - INFO - Group 'Tour & Travel from Kolkata': 12 posts, 0 leads found
+2026-06-21 14:46:20,285 - scanner - INFO - Scan complete, sleeping for 30 seconds
+2026-06-21 14:46:50,293 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 14:46:50,969 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1HA2D3iTXF/
+2026-06-21 14:48:42,721 - scanner - INFO - Group 'Tour & Travel from Kolkata': 12 posts, 2 leads found
+2026-06-21 14:48:42,784 - scanner - INFO - Scan complete, sleeping for 30 seconds
+2026-06-21 14:49:12,793 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 14:49:13,511 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1HA2D3iTXF/
+2026-06-21 14:50:46,646 - scanner - INFO - Group 'Notifications': 14 posts, 2 leads found
+2026-06-21 14:50:46,729 - scanner - INFO - Scan complete, sleeping for 30 seconds
+2026-06-21 14:51:16,734 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 14:51:17,441 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1HA2D3iTXF/
+2026-06-21 14:52:56,974 - scanner - INFO - Group 'Notifications': 14 posts, 2 leads found
+2026-06-21 14:52:57,057 - scanner - INFO - Scan complete, sleeping for 30 seconds
+2026-06-21 14:53:27,063 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 14:53:27,792 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1HA2D3iTXF/
+2026-06-21 14:54:56,959 - scanner - INFO - Group 'Notifications': 12 posts, 2 leads found
+2026-06-21 14:54:57,043 - scanner - INFO - Scan complete, sleeping for 30 seconds
+2026-06-21 14:55:27,047 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 14:55:27,791 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1HA2D3iTXF/
+2026-06-21 14:57:00,272 - scanner - INFO - Group 'Notifications': 14 posts, 2 leads found
+2026-06-21 14:57:00,357 - scanner - INFO - Scan complete, sleeping for 30 seconds
+2026-06-21 14:57:30,361 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 14:57:31,115 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1HA2D3iTXF/
+2026-06-21 14:59:11,937 - scanner - INFO - Group 'Notifications': 14 posts, 2 leads found
+2026-06-21 14:59:12,026 - scanner - INFO - Scan complete, sleeping for 30 seconds
+2026-06-21 15:15:41,530 - scanner - INFO - Facebook Scanner initialized
+2026-06-21 15:15:41,535 - scanner - INFO - Scanner started
+2026-06-21 15:15:41,535 - scanner - INFO - Scanner is running. Press Ctrl+C to stop.
+2026-06-21 15:15:41,537 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 15:15:42,867 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1HA2D3iTXF/
+2026-06-21 15:17:38,825 - scanner - INFO - Group 'Tour & Travel from Kolkata': 12 posts, 2 leads found
+2026-06-21 15:17:38,920 - scanner - INFO - Scan complete, sleeping for 30 seconds
+2026-06-21 15:18:08,928 - scanner - INFO - Starting scan of 1 groups
+2026-06-21 15:18:09,189 - scanner - ERROR - Error in browser context: BrowserType.launch_persistent_context: Opening in existing browser session. This usually means that the profile is already in use by another instance of Chromium.
+Call log:
+  - <launching> /Users/amangupta/Library/Caches/ms-playwright/chromium-1223/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --no-first-run --no-default-browser-check --user-data-dir=/Users/amangupta/Desktop/TravelAgent/.facebook_session --remote-debugging-pipe about:blank
+  - <launched> pid=65585
+  - [pid=65585][out] Opening in existing browser session.
+  - [pid=65585] <gracefully close start>
+  - [pid=65585] <kill>
+  - [pid=65585] <will force kill>
+  - [pid=65585] exception while trying to kill process: Error: kill EPERM
+  - [pid=65585] <process did exit: exitCode=0, signal=null>
+  - [pid=65585] starting temporary directories cleanup
+  - [pid=65585] finished temporary directories cleanup
+  - [pid=65585] <gracefully close end>
+
+2026-06-21 15:18:09,189 - scanner - INFO - Scan complete, sleeping for 30 seconds

@@ -12,7 +12,7 @@ from logger import database_logger
 
 # Database setup
 engine = create_engine(f"sqlite:///{DATABASE_PATH}", echo=False)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine,expire_on_commit=False)
 
 def init_db():
     """Initialize database tables"""

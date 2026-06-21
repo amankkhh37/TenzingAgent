@@ -32,7 +32,7 @@ OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen3:8b")
 OLLAMA_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "30"))
 
 # Scanner Configuration
-SCAN_INTERVAL = int(os.getenv("SCAN_INTERVAL", "300"))  # 5 minutes
+SCAN_INTERVAL = int(os.getenv("SCAN_INTERVAL", "30"))  # 5 minutes
 MAX_SCROLLS = int(os.getenv("MAX_SCROLLS", "10"))
 GROUP_URLS = os.getenv("GROUP_URLS", "").split(",") if os.getenv("GROUP_URLS") else []
 

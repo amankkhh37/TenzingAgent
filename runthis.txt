@@ -1,0 +1,9 @@
+# Kill old processes
+pkill -f scanner
+pkill -f comment_worker
+pkill -f streamlit
+
+# Start fresh
+python scanner.py &
+python comment_worker.py &
+streamlit run app.py

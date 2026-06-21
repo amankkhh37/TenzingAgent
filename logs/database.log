@@ -32,3 +32,62 @@
 2026-06-21 13:44:48,236 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
 2026-06-21 13:45:22,656 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
 2026-06-21 13:45:26,181 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:05:08,609 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:30:27,773 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:30:45,984 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:30:46,034 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:30:47,064 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:30:47,107 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:30:49,884 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:34:14,872 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:34:14,931 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:34:15,895 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:34:35,255 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:39:25,445 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:39:25,493 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:39:26,718 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:39:34,688 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:43:29,504 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:43:29,564 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:43:36,707 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:43:36,810 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:43:36,855 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:45:42,044 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 14:47:39,174 - database - INFO - Lead created: 1 from Unknown
+2026-06-21 14:47:39,177 - database - INFO - Logged action: CREATED for lead 1
+2026-06-21 14:48:36,595 - database - INFO - Lead created: 2 from Unknown
+2026-06-21 14:48:36,598 - database - INFO - Logged action: CREATED for lead 2
+2026-06-21 14:49:51,854 - database - INFO - Lead created: 3 from Unknown
+2026-06-21 14:49:51,857 - database - INFO - Logged action: CREATED for lead 3
+2026-06-21 14:50:40,521 - database - INFO - Lead created: 4 from Unknown
+2026-06-21 14:50:40,522 - database - INFO - Logged action: CREATED for lead 4
+2026-06-21 14:51:57,952 - database - INFO - Lead created: 5 from Unknown
+2026-06-21 14:51:57,954 - database - INFO - Logged action: CREATED for lead 5
+2026-06-21 14:52:50,838 - database - INFO - Lead created: 6 from Unknown
+2026-06-21 14:52:50,840 - database - INFO - Logged action: CREATED for lead 6
+2026-06-21 14:54:05,021 - database - INFO - Lead created: 7 from Unknown
+2026-06-21 14:54:05,023 - database - INFO - Logged action: CREATED for lead 7
+2026-06-21 14:54:50,821 - database - INFO - Lead created: 8 from Unknown
+2026-06-21 14:54:50,824 - database - INFO - Logged action: CREATED for lead 8
+2026-06-21 14:56:03,123 - database - INFO - Lead created: 9 from Unknown
+2026-06-21 14:56:03,126 - database - INFO - Logged action: CREATED for lead 9
+2026-06-21 14:56:54,131 - database - INFO - Lead created: 10 from Unknown
+2026-06-21 14:56:54,134 - database - INFO - Logged action: CREATED for lead 10
+2026-06-21 14:58:05,733 - database - INFO - Lead created: 11 from Unknown
+2026-06-21 14:58:05,736 - database - INFO - Logged action: CREATED for lead 11
+2026-06-21 14:59:05,788 - database - INFO - Lead created: 12 from Unknown
+2026-06-21 14:59:05,790 - database - INFO - Logged action: CREATED for lead 12
+2026-06-21 15:10:45,066 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 15:11:52,193 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 15:11:52,264 - database - INFO - Lead 1 updated
+2026-06-21 15:11:52,266 - database - INFO - Logged action: APPROVED for lead 1
+2026-06-21 15:11:52,298 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 15:15:41,472 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 15:15:41,530 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 15:15:42,376 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 15:16:33,934 - database - INFO - Lead created: 13 from Unknown
+2026-06-21 15:16:33,935 - database - INFO - Logged action: CREATED for lead 13
+2026-06-21 15:16:41,133 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
+2026-06-21 15:17:32,700 - database - INFO - Lead created: 14 from Unknown
+2026-06-21 15:17:32,702 - database - INFO - Logged action: CREATED for lead 14
+2026-06-21 15:18:02,158 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
