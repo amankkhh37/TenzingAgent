@@ -22,6 +22,10 @@ def setup_logger(name: str, log_file: str = None) -> logging.Logger:
     """
     logger = logging.getLogger(name)
     logger.setLevel(getattr(logging, LOG_LEVEL))
+
+    # Avoid duplicate handlers during Streamlit reruns/re-imports.
+    if logger.handlers:
+        return logger
     
     # Formatter
     formatter = logging.Formatter(LOG_FORMAT)

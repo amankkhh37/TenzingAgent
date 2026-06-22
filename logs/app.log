@@ -1,1 +1,8 @@
-2026-06-22 06:22:50,353 - app - INFO - Creating shared Facebook browser context (headless=False, profile=C:\Users\amankkhh37\TenzingAgent\.facebook_session)
+2026-06-22 08:01:07,353 - app - INFO - Creating shared Facebook browser context (headless=False, profile=C:\Users\amankkhh37\TenzingAgent\.facebook_session)
+2026-06-22 08:01:14,661 - app - INFO - Facebook login page opened
+2026-06-22 08:34:23,857 - app - INFO - Creating shared Facebook browser context (headless=False, profile=C:\Users\amankkhh37\TenzingAgent\.facebook_session)
+2026-06-22 08:34:37,592 - app - INFO - Facebook login page opened
+2026-06-22 08:46:45,224 - app - INFO - Creating shared Facebook browser context (headless=False, profile=C:\Users\amankkhh37\TenzingAgent\.facebook_session)
+2026-06-22 08:46:53,670 - app - INFO - Facebook login page opened
+2026-06-22 08:56:47,850 - app - INFO - Creating shared Facebook browser context (headless=False, profile=C:\Users\amankkhh37\TenzingAgent\.facebook_session)
+2026-06-22 08:57:54,194 - app - INFO - Facebook login page opened

@@ -4,15 +4,16 @@ Main interface for managing leads and viewing analytics
 """
 import streamlit as st
 import pandas as pd
+import time
 from datetime import date, datetime, timedelta
 import plotly.express as px
 import plotly.graph_objects as go
 from typing import List, Dict
 
 from threading import Thread
+from playwright.sync_api import sync_playwright
 from scanner import FacebookScanner
 from comment_worker import CommentWorker
-from browser_manager import BrowserManager
 
 from database import (
     init_db, LeadDatabase, GroupDatabase, SettingsDatabase,
@@ -21,13 +22,36 @@ from database import (
 from models import Lead
 from analytics import Analytics
 from content_generator import ContentGenerator
-from config import BUSINESS_NAME, LLM_PROVIDER
+from config import BUSINESS_NAME, FACEBOOK_PROFILE_PATH, LLM_PROVIDER
 
 
 def _facebook_login_worker() -> None:
-    """Open Facebook login using the shared browser context."""
+    """Open a login-only browser. The scanner never reuses this object."""
     try:
-        BrowserManager.open_login_tab()
+        with sync_playwright() as p:
+            context = p.chromium.launch_persistent_context(
+                FACEBOOK_PROFILE_PATH,
+                headless=False,
+                args=[
+                    "--disable-blink-features=AutomationControlled",
+                    "--disable-dev-shm-usage",
+                    "--no-first-run",
+                    "--no-default-browser-check",
+                ],
+            )
+            page = context.new_page()
+            page.goto("https://www.facebook.com/login", wait_until="domcontentloaded")
+
+            while True:
+                try:
+                    if not context.pages:
+                        break
+                except Exception:
+                    break
+                time.sleep(1)
+
+            SettingsDatabase.set_setting("facebook_login_validated", "true")
+            SettingsDatabase.set_setting("facebook_login_validated_at", datetime.utcnow().isoformat())
     except Exception as e:
         st.session_state["fb_login_error"] = str(e)
     finally:
@@ -43,6 +67,9 @@ st.set_page_config(
 
 # Initialize database
 init_db()
+
+if "scanner" not in st.session_state:
+    st.session_state["scanner"] = FacebookScanner()
 
 # Custom CSS
 st.markdown("""
@@ -69,6 +96,12 @@ with st.sidebar:
     
     # Scanner Controls
     st.subheader("🔍 Scanner Controls")
+
+    use_groups = st.checkbox(
+        "Use Group List for Scanning", value=True,
+        help="If disabled, scanner processes home/feed page instead"
+    )
+    SettingsDatabase.set_setting("scan_use_groups", "true" if use_groups else "false")
     
     scanner_state = st.session_state.get("scanner")
     comment_worker_state = st.session_state.get("comment_worker")
@@ -85,12 +118,12 @@ with st.sidebar:
             st.session_state["fb_login_running"] = True
             st.session_state["fb_login_error"] = ""
             Thread(target=_facebook_login_worker, daemon=True).start()
-            st.success("Browser launched. Please log in. Scanner will reuse this same session.")
+            st.success("Browser launched. Please log in, then close the browser window.")
 
     if st.button("I have completed Facebook login", use_container_width=True):
         SettingsDatabase.set_setting("facebook_login_validated", "true")
         SettingsDatabase.set_setting("facebook_login_validated_at", datetime.utcnow().isoformat())
-        st.success("Facebook login marked as validated and saved.")
+        st.success("Facebook login marked as validated. Close the login browser before starting the scanner.")
 
     if st.session_state.get("fb_login_error"):
         st.error(f"Facebook login error: {st.session_state['fb_login_error']}")
@@ -105,13 +138,14 @@ with st.sidebar:
     col1, col2 = st.columns(2)
     with col1:
         if st.button("Start Scanner"):
-            if not scanner_state:
-                SettingsDatabase.set_setting("scan_enabled", "true")
-                SettingsDatabase.set_setting("debug_visible_browser", "true")
-                scanner_state = FacebookScanner()
-                st.session_state["scanner"] = scanner_state
-                Thread(target=scanner_state.start, daemon=True).start()
-                st.success("Scanner started.")
+            SettingsDatabase.set_setting("scan_enabled", "true")
+            SettingsDatabase.set_setting("debug_visible_browser", "true")
+            if scanner_state and not scanner_state.running:
+                try:
+                    scanner_state.start()
+                    st.success("Scanner started.")
+                except Exception as e:
+                    st.error(f"Could not start scanner: {e}")
             else:
                 st.warning("Scanner is already running.")
     with col2:

@@ -1,171 +1,41 @@
-2026-06-21 13:23:45,371 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:23:47,328 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:23:51,663 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:24:56,428 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:24:58,206 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:24:58,266 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:25:03,428 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:25:28,010 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:25:54,043 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:25:59,523 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:29:58,052 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:31:19,239 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:32:23,172 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:35:35,465 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:35:35,509 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:35:36,670 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:36:30,140 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:36:31,958 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:36:32,027 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:36:33,642 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:37:58,519 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:37:58,570 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:37:59,366 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:38:14,947 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:38:26,377 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:40:09,154 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:41:38,020 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:41:59,595 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:42:15,426 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:42:44,809 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:44:38,277 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:44:48,236 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:45:22,656 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 13:45:26,181 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:05:08,609 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:30:27,773 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:30:45,984 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:30:46,034 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:30:47,064 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:30:47,107 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:30:49,884 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:34:14,872 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:34:14,931 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:34:15,895 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:34:35,255 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:39:25,445 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:39:25,493 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:39:26,718 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:39:34,688 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:43:29,504 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:43:29,564 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:43:36,707 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:43:36,810 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:43:36,855 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:45:42,044 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 14:47:39,174 - database - INFO - Lead created: 1 from Unknown
-2026-06-21 14:47:39,177 - database - INFO - Logged action: CREATED for lead 1
-2026-06-21 14:48:36,595 - database - INFO - Lead created: 2 from Unknown
-2026-06-21 14:48:36,598 - database - INFO - Logged action: CREATED for lead 2
-2026-06-21 14:49:51,854 - database - INFO - Lead created: 3 from Unknown
-2026-06-21 14:49:51,857 - database - INFO - Logged action: CREATED for lead 3
-2026-06-21 14:50:40,521 - database - INFO - Lead created: 4 from Unknown
-2026-06-21 14:50:40,522 - database - INFO - Logged action: CREATED for lead 4
-2026-06-21 14:51:57,952 - database - INFO - Lead created: 5 from Unknown
-2026-06-21 14:51:57,954 - database - INFO - Logged action: CREATED for lead 5
-2026-06-21 14:52:50,838 - database - INFO - Lead created: 6 from Unknown
-2026-06-21 14:52:50,840 - database - INFO - Logged action: CREATED for lead 6
-2026-06-21 14:54:05,021 - database - INFO - Lead created: 7 from Unknown
-2026-06-21 14:54:05,023 - database - INFO - Logged action: CREATED for lead 7
-2026-06-21 14:54:50,821 - database - INFO - Lead created: 8 from Unknown
-2026-06-21 14:54:50,824 - database - INFO - Logged action: CREATED for lead 8
-2026-06-21 14:56:03,123 - database - INFO - Lead created: 9 from Unknown
-2026-06-21 14:56:03,126 - database - INFO - Logged action: CREATED for lead 9
-2026-06-21 14:56:54,131 - database - INFO - Lead created: 10 from Unknown
-2026-06-21 14:56:54,134 - database - INFO - Logged action: CREATED for lead 10
-2026-06-21 14:58:05,733 - database - INFO - Lead created: 11 from Unknown
-2026-06-21 14:58:05,736 - database - INFO - Logged action: CREATED for lead 11
-2026-06-21 14:59:05,788 - database - INFO - Lead created: 12 from Unknown
-2026-06-21 14:59:05,790 - database - INFO - Logged action: CREATED for lead 12
-2026-06-21 15:10:45,066 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 15:11:52,193 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 15:11:52,264 - database - INFO - Lead 1 updated
-2026-06-21 15:11:52,266 - database - INFO - Logged action: APPROVED for lead 1
-2026-06-21 15:11:52,298 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 15:15:41,472 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 15:15:41,530 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 15:15:42,376 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 15:16:33,934 - database - INFO - Lead created: 13 from Unknown
-2026-06-21 15:16:33,935 - database - INFO - Logged action: CREATED for lead 13
-2026-06-21 15:16:41,133 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-21 15:17:32,700 - database - INFO - Lead created: 14 from Unknown
-2026-06-21 15:17:32,702 - database - INFO - Logged action: CREATED for lead 14
-2026-06-21 15:18:02,158 - database - INFO - Database initialized at /Users/amangupta/Desktop/TravelAgent/data/travel_crm.db
-2026-06-22 04:56:48,659 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:04:30,830 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:05:20,057 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:05:20,734 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:06:57,616 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:06:58,398 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:08:07,938 - database - INFO - Lead 1 updated
-2026-06-22 05:08:08,026 - database - INFO - Logged action: POST_FAILED for lead 1
-2026-06-22 05:13:42,651 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:14:12,701 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:14:18,541 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:14:57,446 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:18:44,025 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:18:48,637 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:18:48,917 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:18:49,218 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:18:52,691 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:37:13,995 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:37:48,330 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:38:05,635 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:39:07,281 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:39:10,619 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:39:22,849 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:39:40,102 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:39:40,170 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 05:39:53,017 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:00:01,018 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:00:06,349 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:00:50,849 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:00:50,957 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:02:55,631 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:05:13,475 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:05:13,475 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:05:25,329 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:05:25,329 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:05:25,416 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:05:25,416 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:06:26,321 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:06:26,321 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:08:15,171 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:08:15,171 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:08:49,633 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:08:49,633 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:08:54,570 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:08:54,570 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:10:27,087 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:10:27,087 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:11:16,419 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:11:16,419 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:11:29,419 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:11:29,419 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:11:42,701 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:11:42,701 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:11:43,035 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:11:43,035 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:12:51,705 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:12:51,705 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:13:12,099 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:13:12,099 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:13:31,049 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:13:31,049 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:13:31,568 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:13:31,568 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:14:09,709 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:14:09,709 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:14:09,757 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:14:09,757 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:22:44,156 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:22:48,319 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:23:09,801 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:23:17,126 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:23:17,171 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:24:27,331 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:24:28,101 - database - INFO - Lead 7 updated
-2026-06-22 06:24:28,162 - database - INFO - Logged action: APPROVED for lead 7
-2026-06-22 06:24:28,287 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:25:00,641 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
-2026-06-22 06:25:59,999 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:01:00,204 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:01:00,206 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:01:05,394 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:01:06,795 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:01:30,069 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:05:12,128 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:05:12,268 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:05:34,183 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:28:14,730 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:28:14,744 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:34:16,154 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:34:18,620 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:34:47,529 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:35:50,975 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:36:04,048 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:36:23,200 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:36:29,197 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:46:33,993 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:46:33,996 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:46:42,718 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:46:44,046 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:47:16,002 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:47:16,093 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:47:23,353 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:48:03,707 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:48:44,727 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:50:51,021 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:56:44,504 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:58:04,701 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 08:58:59,578 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 09:18:49,396 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 09:18:49,478 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 09:18:49,487 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 09:18:49,539 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 09:19:02,573 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 09:19:06,473 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 09:20:38,906 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 09:21:08,016 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 09:41:06,315 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 09:41:06,612 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db
+2026-06-22 09:41:19,906 - database - INFO - Database initialized at C:\Users\amankkhh37\TenzingAgent\data\travel_crm.db

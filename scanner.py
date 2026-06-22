@@ -6,7 +6,7 @@ import time
 import threading
 from typing import List, Optional
 from datetime import datetime
-from playwright.sync_api import Page
+from playwright.sync_api import BrowserContext, Page, Playwright, sync_playwright
 from database import (
     LeadDatabase, GroupDatabase, SettingsDatabase, DailyStatsDatabase,
     AuditLogDatabase, init_db
@@ -18,24 +18,36 @@ from config import (
     SCAN_INTERVAL, GROUP_URLS, SCAN_LOGIN_WAIT_SECONDS, REQUIRE_LOGIN_BEFORE_SCAN
 )
 from logger import scanner_logger
-from browser_manager import BrowserManager
 
 class FacebookScanner:
     """Continuously scan Facebook groups for travel leads"""
+    _instance_lock = threading.Lock()
+    _active_instance_id: Optional[int] = None
     
     def __init__(self):
         self.running = False
         self.lead_scorer = LeadScorer()
         self.comment_generator = CommentGenerator()
         self.scan_thread = None
+        self._playwright: Optional[Playwright] = None
+        self._context: Optional[BrowserContext] = None
+        self._page: Optional[Page] = None
         init_db()
         scanner_logger.info("Facebook Scanner initialized")
     
     def start(self):
         """Start the scanner in background thread"""
-        if self.running:
-            scanner_logger.warning("Scanner already running")
-            return
+        with self.__class__._instance_lock:
+            if self.running:
+                scanner_logger.warning("Scanner already running")
+                return
+
+            active_id = self.__class__._active_instance_id
+            if active_id is not None and active_id != id(self):
+                scanner_logger.warning("Another scanner instance is already running; start request ignored")
+                return
+
+            self.__class__._active_instance_id = id(self)
         
         self.running = True
         self.scan_thread = threading.Thread(target=self._scan_loop, daemon=False)
@@ -47,38 +59,58 @@ class FacebookScanner:
         self.running = False
         if self.scan_thread:
             self.scan_thread.join(timeout=10)
+        with self.__class__._instance_lock:
+            if self.__class__._active_instance_id == id(self):
+                self.__class__._active_instance_id = None
         scanner_logger.info("Scanner stopped")
+
+    def _sleep_until_stopped(self, seconds: int) -> None:
+        """Sleep in short chunks so Stop Scanner can close the browser promptly."""
+        end_time = time.time() + seconds
+        while self.running and time.time() < end_time:
+            time.sleep(min(1, end_time - time.time()))
     
     def _scan_loop(self):
         """Main scanning loop"""
-        while self.running:
-            try:
-                # Check if scanning is enabled
-                scan_enabled = SettingsDatabase.get_setting("scan_enabled", "true").lower() == "true"
-                
-                if not scan_enabled:
-                    scanner_logger.debug("Scanning disabled, sleeping...")
-                    time.sleep(10)
-                    continue
-                
-                # Get group URLs
-                group_urls = self._get_group_urls()
-                if not group_urls:
-                    scanner_logger.warning("No group URLs configured")
-                    time.sleep(SCAN_INTERVAL)
-                    continue
-                
-                # Scan each group
-                scanner_logger.info(f"Starting scan of {len(group_urls)} groups")
-                self._scan_groups(group_urls)
-                
-                # Sleep before next scan
-                scanner_logger.info(f"Scan complete, sleeping for {SCAN_INTERVAL} seconds")
-                time.sleep(SCAN_INTERVAL)
-                
-            except Exception as e:
-                scanner_logger.error(f"Error in scan loop: {e}", exc_info=True)
-                time.sleep(30)
+        try:
+            while self.running:
+                try:
+                    # Check if scanning is enabled
+                    scan_enabled = SettingsDatabase.get_setting("scan_enabled", "true").lower() == "true"
+                    use_groups = SettingsDatabase.get_setting("scan_use_groups", "true").lower() == "true"
+                    
+                    if not scan_enabled:
+                        scanner_logger.debug("Scanning disabled, sleeping...")
+                        self._sleep_until_stopped(10)
+                        continue
+
+                    if use_groups:
+                        # Get group URLs
+                        group_urls = self._get_group_urls()
+                        if not group_urls:
+                            scanner_logger.warning("Group scan mode enabled but no group URLs configured")
+                            self._sleep_until_stopped(SCAN_INTERVAL)
+                            continue
+
+                        # Scan each group
+                        scanner_logger.info(f"Starting group scan of {len(group_urls)} groups")
+                        self._scan_groups(group_urls)
+                    else:
+                        scanner_logger.info("Group scan mode disabled. Scanning Facebook home/current feed")
+                        self._scan_home_feed()
+                    
+                    # Sleep before next scan
+                    scanner_logger.info(f"Scan complete, sleeping for {SCAN_INTERVAL} seconds")
+                    self._sleep_until_stopped(SCAN_INTERVAL)
+                    
+                except Exception as e:
+                    scanner_logger.error(f"Error in scan loop: {e}", exc_info=True)
+                    self._sleep_until_stopped(30)
+        finally:
+            self._close_browser()
+            with self.__class__._instance_lock:
+                if self.__class__._active_instance_id == id(self):
+                    self.__class__._active_instance_id = None
     
     def _get_group_urls(self) -> List[str]:
         """Get enabled group URLs from database and config"""
@@ -95,6 +127,75 @@ class FacebookScanner:
                 GroupDatabase.create_or_update_group(url, url)
         
         return list(set(urls))  # Remove duplicates
+
+    def _get_browser_page(self, headless: bool) -> Page:
+        """Create or reuse the scanner-owned page in the scanner thread."""
+        if self._context is not None:
+            try:
+                if self._page is not None and not self._page.is_closed():
+                    return self._page
+
+                pages = self._context.pages
+                if pages:
+                    self._page = pages[-1]
+                    return self._page
+
+                self._page = self._context.new_page()
+                return self._page
+            except Exception:
+                self._close_browser()
+
+        if self._playwright is None:
+            self._playwright = sync_playwright().start()
+
+        scanner_logger.info(
+            "Opening scanner-owned Facebook browser (headless=%s, profile=%s)",
+            headless,
+            FACEBOOK_PROFILE_PATH,
+        )
+        self._context = self._playwright.chromium.launch_persistent_context(
+            FACEBOOK_PROFILE_PATH,
+            headless=headless,
+            args=[
+                "--disable-blink-features=AutomationControlled",
+                "--disable-dev-shm-usage",
+                "--no-first-run",
+                "--no-default-browser-check",
+            ],
+        )
+        self._page = self._context.new_page()
+        return self._page
+
+    def _close_browser(self) -> None:
+        """Close scanner-owned browser resources from the scanner thread."""
+        if self._context is not None:
+            try:
+                self._context.close()
+            except Exception as e:
+                scanner_logger.debug(f"Error closing scanner browser context: {e}")
+            finally:
+                self._context = None
+                self._page = None
+
+        if self._playwright is not None:
+            try:
+                self._playwright.stop()
+            except Exception as e:
+                scanner_logger.debug(f"Error stopping scanner Playwright: {e}")
+            finally:
+                self._playwright = None
+
+    def _handle_browser_start_error(self, error: Exception) -> bool:
+        message = str(error)
+        if "Opening in existing browser session" not in message:
+            return False
+
+        scanner_logger.error(
+            "Facebook profile is already open in another browser. Close the visible "
+            "Facebook login/scanner browser window, then start the scanner again."
+        )
+        self.running = False
+        return True
     
     def _scan_groups(self, group_urls: List[str]):
         """Scan multiple groups"""
@@ -102,11 +203,11 @@ class FacebookScanner:
             debug_visible_browser = SettingsDatabase.get_setting("debug_visible_browser", "false").lower() == "true"
             use_headless = FACEBOOK_HEADLESS and not debug_visible_browser
             scanner_logger.info(
-                f"Attaching scanner to shared browser (headless={use_headless}, profile={FACEBOOK_PROFILE_PATH})"
+                f"Using scanner-owned browser for group scan (headless={use_headless}, profile={FACEBOOK_PROFILE_PATH})"
             )
 
-            page = BrowserManager.get_or_create_page(headless=use_headless)
-            scanner_logger.info("Scanner attached to shared browser page")
+            page = self._get_browser_page(headless=use_headless)
+            scanner_logger.info("Scanner browser page ready for group scan")
 
             if REQUIRE_LOGIN_BEFORE_SCAN:
                 if not self._wait_for_login(page):
@@ -123,26 +224,57 @@ class FacebookScanner:
                 except Exception as e:
                     scanner_logger.error(f"Error scanning group {group_url}: {e}")
         except Exception as e:
+            if self._handle_browser_start_error(e):
+                return
             scanner_logger.error(f"Error in browser context: {e}")
 
-    def _is_logged_in(self, page: Page) -> bool:
-        """Best-effort check for an active Facebook login session."""
+    def _scan_home_feed(self):
+        """Scan posts from Facebook home/current feed when group mode is disabled."""
         try:
-            current_url = page.url or ""
-            if "facebook.com/login" in current_url:
-                return False
+            debug_visible_browser = SettingsDatabase.get_setting("debug_visible_browser", "false").lower() == "true"
+            use_headless = FACEBOOK_HEADLESS and not debug_visible_browser
+            scanner_logger.info(
+                f"Using scanner-owned browser for home scan (headless={use_headless}, profile={FACEBOOK_PROFILE_PATH})"
+            )
 
-            # If home/feed/groups loads and login form is absent, treat as logged in.
-            login_inputs = page.query_selector('input[name="email"], input[name="pass"]')
-            if login_inputs:
-                return False
+            page = self._get_browser_page(headless=use_headless)
+            scanner_logger.info("Scanner browser page ready for home scan")
 
-            return True
-        except Exception:
+            if REQUIRE_LOGIN_BEFORE_SCAN:
+                if not self._wait_for_login(page):
+                    scanner_logger.warning(
+                        "Facebook login not detected within grace period. Skipping home scan cycle."
+                    )
+                    return
+
+            self._scan_single_group(page, "https://www.facebook.com/")
+        except Exception as e:
+            if self._handle_browser_start_error(e):
+                return
+            scanner_logger.error(f"Error scanning home feed: {e}")
+
+    def _is_logged_in(self, page: Page) -> bool:
+        try:
+            current_url = page.url.lower()
+
+            print(f"LOGIN CHECK URL: {current_url}")
+
+            # If we're already on Facebook and not on login page,
+            # assume login is valid.
+            if "facebook.com" in current_url and "login" not in current_url:
+                return True
+
             return False
 
+        except Exception as e:
+            print(f"LOGIN CHECK ERROR: {e}")
+            return False
     def _wait_for_login(self, page: Page) -> bool:
         """Give user time to authenticate before scanning starts."""
+        if self._is_logged_in(page):
+            scanner_logger.info("Facebook login/session already active on existing page.")
+            return True
+
         try:
             page.goto("https://www.facebook.com/", wait_until="domcontentloaded", timeout=60000)
         except Exception:
@@ -159,7 +291,14 @@ class FacebookScanner:
             if self._is_logged_in(page):
                 scanner_logger.info("Facebook login/session detected. Starting scan.")
                 return True
-            scanner_logger.debug("Waiting for Facebook login/session...")
+            try:
+                scanner_logger.debug(
+                    "Waiting for Facebook login/session... url=%s title=%s",
+                    page.url,
+                    page.title(),
+                )
+            except Exception:
+                scanner_logger.debug("Waiting for Facebook login/session...")
             time.sleep(2)
 
         scanner_logger.warning("Facebook login/session was not detected before timeout")
