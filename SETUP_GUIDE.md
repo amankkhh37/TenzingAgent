@@ -8,13 +8,30 @@ pip install -r requirements.txt
 playwright install
 ```
 
-### 2. Start Ollama
+### 2. Start Ollama (Optional)
 ```bash
 # Terminal 1 - Start Ollama server
 ollama serve
 
 # Terminal 2 - Download Qwen3 model (first time only)
 ollama pull qwen3:8b
+### 2b. Configure Azure Foundry/OpenAI (Optional)
+
+If Ollama is not available, configure Azure in `.env`:
+
+```bash
+LLM_PROVIDER=auto
+AZURE_OPENAI_ENDPOINT=https://amanbyguptaaccenture.services.ai.azure.com
+AZURE_OPENAI_API_KEY=your_api_key
+AZURE_OPENAI_API_VERSION=2024-10-21
+AZURE_OPENAI_DEPLOYMENT=gpt-4o
+```
+
+You can force Azure only mode by setting:
+
+```bash
+LLM_PROVIDER=azure
+```
 ```
 
 ### 3. Run the Dashboard

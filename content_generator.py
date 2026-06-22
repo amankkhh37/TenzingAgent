@@ -1,12 +1,11 @@
 """
 Daily content generation for Facebook posts
 """
-import requests
-import json
 from datetime import datetime, time
 from typing import Optional
-from config import OLLAMA_ENDPOINT, OLLAMA_MODEL, OLLAMA_TIMEOUT, CONTENT_GENERATION_HOUR
+from config import CONTENT_GENERATION_HOUR
 from database import get_session, GeneratedContent
+from llm_client import LLMClient
 from logger import lead_scorer_logger
 
 class ContentGenerator:
@@ -27,10 +26,8 @@ class ContentGenerator:
         "Travel budget tips"
     ]
     
-    def __init__(self, endpoint: str = OLLAMA_ENDPOINT, model: str = OLLAMA_MODEL, timeout: int = OLLAMA_TIMEOUT):
-        self.endpoint = f"{endpoint}/api/generate"
-        self.model = model
-        self.timeout = timeout
+    def __init__(self):
+        self.client = LLMClient()
     
     def generate_daily_content(self, topic: Optional[str] = None) -> Optional[str]:
         """
@@ -66,19 +63,7 @@ Example topics to include:
 Generate a single post ready to share on Facebook:"""
         
         try:
-            response = requests.post(
-                self.endpoint,
-                json={
-                    "model": self.model,
-                    "prompt": prompt,
-                    "stream": False
-                },
-                timeout=self.timeout
-            )
-            
-            response.raise_for_status()
-            result = response.json()
-            content = result.get("response", "").strip()
+            content = (self.client.generate(prompt) or "").strip()
             
             if content:
                 # Save to database

@@ -5,7 +5,7 @@ A sophisticated Python application for automating travel agent lead generation a
 ## Features
 
 - 🔍 **Facebook Group Scanning** - Automatically scan multiple Facebook groups for travel-related posts
-- 🤖 **AI Lead Scoring** - Uses local Ollama with Qwen3 model to analyze posts and score leads
+- 🤖 **AI Lead Scoring** - Uses local Ollama or Azure Foundry/OpenAI models (with automatic fallback)
 - 📊 **Interactive Dashboard** - Streamlit-based dashboard to review and manage leads
 - 💬 **Automated Commenting** - Post curated responses directly to Facebook posts
 - 💾 **SQLite Storage** - Persistent storage of posts, leads, and comments
@@ -103,6 +103,22 @@ The dashboard will open at `http://localhost:8501`
 - **Default:** `http://localhost:11434`
 - **Model:** `qwen3:8b`
 - Configure in app settings (sidebar)
+
+### Optional Azure Foundry/OpenAI Configuration
+Set these environment variables in `.env` to enable Azure as primary or fallback:
+
+```bash
+LLM_PROVIDER=auto
+AZURE_OPENAI_ENDPOINT=https://amanbyguptaaccenture.services.ai.azure.com
+AZURE_OPENAI_API_KEY=your_api_key
+AZURE_OPENAI_API_VERSION=2024-10-21
+AZURE_OPENAI_DEPLOYMENT=gpt-4o
+```
+
+Provider behavior:
+- `auto` (default): try Ollama first, then fallback to Azure
+- `ollama`: use Ollama only
+- `azure`: use Azure only
 
 ### Database
 - **Location:** `tenzing_growth.db` (created automatically)

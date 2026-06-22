@@ -1,10 +1,9 @@
 """
-Lead scoring using local Ollama LLM
+Lead scoring using configurable LLM provider.
 """
 import json
-import requests
 from typing import Optional, Dict
-from config import OLLAMA_ENDPOINT, OLLAMA_MODEL, OLLAMA_TIMEOUT
+from llm_client import LLMClient
 from logger import lead_scorer_logger
 
 class LeadScorer:
@@ -23,22 +22,15 @@ class LeadScorer:
         "Not A Lead"
     ]
     
-    def __init__(self, endpoint: str = OLLAMA_ENDPOINT, model: str = OLLAMA_MODEL, timeout: int = OLLAMA_TIMEOUT):
-        self.endpoint = f"{endpoint}/api/generate"
-        self.model = model
-        self.timeout = timeout
-        self.verify_connection()
+    def __init__(self):
+        self.client = LLMClient()
     
     def verify_connection(self) -> bool:
-        """Verify Ollama is running"""
+        """Verify at least one configured LLM backend can be reached."""
         try:
-            response = requests.get(
-                f"{self.endpoint.replace('/api/generate', '/api/tags')}",
-                timeout=5
-            )
-            return response.status_code == 200
+            return self.client.generate("Reply with OK.") is not None
         except Exception as e:
-            lead_scorer_logger.error(f"Cannot connect to Ollama: {e}")
+            lead_scorer_logger.error(f"Cannot connect to configured LLM provider: {e}")
             return False
     
     def analyze_post(self, post_text: str, author: str = "") -> Optional[Dict]:
@@ -113,23 +105,13 @@ Return as JSON:
         try:
             lead_scorer_logger.debug(f"Analyzing post from {author}")
             
-            response = requests.post(
-                self.endpoint,
-                json={
-                    "model": self.model,
-                    "prompt": prompt,
-                    "stream": False,
-                    "format": "json"
-                },
-                timeout=self.timeout
-            )
-            
-            response.raise_for_status()
-            result = response.json()
+            result_text = self.client.generate(prompt, expect_json=True)
+            if not result_text:
+                return None
             
             # Parse the JSON response
             try:
-                analysis = json.loads(result.get("response", "{}"))
+                analysis = json.loads(result_text)
                 
                 # Ensure all required fields exist
                 analysis.setdefault("classification", "Not A Lead")
@@ -151,12 +133,6 @@ Return as JSON:
                 lead_scorer_logger.warning(f"Failed to parse JSON response: {e}")
                 return None
         
-        except requests.exceptions.Timeout:
-            lead_scorer_logger.error("Ollama request timed out")
-            return None
-        except requests.exceptions.ConnectionError:
-            lead_scorer_logger.error("Cannot connect to Ollama")
-            return None
         except Exception as e:
             lead_scorer_logger.error(f"Error analyzing post: {e}")
             return None

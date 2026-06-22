@@ -1,10 +1,8 @@
 """
 Generate human-like travel replies without spam language
 """
-import requests
-import json
 from typing import Optional
-from config import OLLAMA_ENDPOINT, OLLAMA_MODEL, OLLAMA_TIMEOUT
+from llm_client import LLMClient
 from logger import lead_scorer_logger
 
 class CommentGenerator:
@@ -20,10 +18,8 @@ class CommentGenerator:
         "NJP": "New Jalpaiguri is the main railway junction for reaching Darjeeling and Sikkim."
     }
     
-    def __init__(self, endpoint: str = OLLAMA_ENDPOINT, model: str = OLLAMA_MODEL, timeout: int = OLLAMA_TIMEOUT):
-        self.endpoint = f"{endpoint}/api/generate"
-        self.model = model
-        self.timeout = timeout
+    def __init__(self):
+        self.client = LLMClient()
     
     def generate_reply(
         self,
@@ -96,19 +92,7 @@ Example good replies:
 Generate ONE natural comment (2-4 sentences max):{tip}"""
         
         try:
-            response = requests.post(
-                self.endpoint,
-                json={
-                    "model": self.model,
-                    "prompt": prompt,
-                    "stream": False
-                },
-                timeout=self.timeout
-            )
-            
-            response.raise_for_status()
-            result = response.json()
-            reply = result.get("response", "").strip()
+            reply = (self.client.generate(prompt) or "").strip()
             
             # Clean up the response
             reply = reply.replace("\\n", "\n")

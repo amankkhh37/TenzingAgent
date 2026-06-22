@@ -31,10 +31,21 @@ OLLAMA_ENDPOINT = os.getenv("OLLAMA_ENDPOINT", "http://localhost:11434")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen3:8b")
 OLLAMA_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "30"))
 
+# LLM Provider Configuration
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "auto").lower()  # auto, ollama, azure
+
+# Azure OpenAI / Foundry Responses API
+AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT", "")
+AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY", "")
+AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION", "2024-10-21")
+AZURE_OPENAI_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4o")
+
 # Scanner Configuration
 SCAN_INTERVAL = int(os.getenv("SCAN_INTERVAL", "30"))  # 5 minutes
 MAX_SCROLLS = int(os.getenv("MAX_SCROLLS", "10"))
 GROUP_URLS = os.getenv("GROUP_URLS", "").split(",") if os.getenv("GROUP_URLS") else []
+SCAN_LOGIN_WAIT_SECONDS = int(os.getenv("SCAN_LOGIN_WAIT_SECONDS", "60"))
+REQUIRE_LOGIN_BEFORE_SCAN = os.getenv("REQUIRE_LOGIN_BEFORE_SCAN", "true").lower() == "true"
 
 # Comment Worker Configuration
 COMMENT_CHECK_INTERVAL = int(os.getenv("COMMENT_CHECK_INTERVAL", "10"))  # 10 seconds

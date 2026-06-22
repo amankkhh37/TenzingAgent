@@ -203,3 +203,23 @@ Call log:
 2026-06-21 15:17:46,707 - comment_worker - INFO - Posting comment for lead 1: https://www.facebook.com/groups/463513024009381/user/100022650241574/?__cft__[0]=AZaltj2mjEidDC4LcKaz7eq-z9qhi8EIYeak_Aj2_XRPKx3c9-wL0Hc0T-h_Wwaimf-p8f6ns-UBv7plxyVA59m23nsLjMfjv1K-BIJPtAdDjlg_iRoMhlhtBKVLa8i_YGXoBiTNy8rVnPq_YB_0lP61SvlORBwWADbn2j-J8gNGR821S9B4_MxqxuSc-vj_8EY&__tn__=R-R
 2026-06-21 15:18:11,500 - comment_worker - ERROR - Could not find comment box for lead 1
 2026-06-21 15:18:11,924 - comment_worker - INFO - Posting comment for lead 1: https://www.facebook.com/groups/463513024009381/user/100022650241574/?__cft__[0]=AZaltj2mjEidDC4LcKaz7eq-z9qhi8EIYeak_Aj2_XRPKx3c9-wL0Hc0T-h_Wwaimf-p8f6ns-UBv7plxyVA59m23nsLjMfjv1K-BIJPtAdDjlg_iRoMhlhtBKVLa8i_YGXoBiTNy8rVnPq_YB_0lP61SvlORBwWADbn2j-J8gNGR821S9B4_MxqxuSc-vj_8EY&__tn__=R-R
+2026-06-22 05:06:57,618 - comment_worker - INFO - Comment Worker initialized
+2026-06-22 05:06:57,639 - comment_worker - INFO - Comment Worker started
+2026-06-22 05:06:57,721 - comment_worker - INFO - Comment Worker is running. Press Ctrl+C to stop.
+2026-06-22 05:06:57,722 - comment_worker - INFO - Found 1 approved leads to post
+2026-06-22 05:07:04,222 - comment_worker - INFO - Posting comment for lead 1: https://www.facebook.com/groups/463513024009381/user/100022650241574/?__cft__[0]=AZaltj2mjEidDC4LcKaz7eq-z9qhi8EIYeak_Aj2_XRPKx3c9-wL0Hc0T-h_Wwaimf-p8f6ns-UBv7plxyVA59m23nsLjMfjv1K-BIJPtAdDjlg_iRoMhlhtBKVLa8i_YGXoBiTNy8rVnPq_YB_0lP61SvlORBwWADbn2j-J8gNGR821S9B4_MxqxuSc-vj_8EY&__tn__=R-R
+2026-06-22 05:07:27,600 - comment_worker - ERROR - Could not find comment box for lead 1
+2026-06-22 05:07:29,829 - comment_worker - INFO - Posting comment for lead 1: https://www.facebook.com/groups/463513024009381/user/100022650241574/?__cft__[0]=AZaltj2mjEidDC4LcKaz7eq-z9qhi8EIYeak_Aj2_XRPKx3c9-wL0Hc0T-h_Wwaimf-p8f6ns-UBv7plxyVA59m23nsLjMfjv1K-BIJPtAdDjlg_iRoMhlhtBKVLa8i_YGXoBiTNy8rVnPq_YB_0lP61SvlORBwWADbn2j-J8gNGR821S9B4_MxqxuSc-vj_8EY&__tn__=R-R
+2026-06-22 05:07:52,602 - comment_worker - ERROR - Could not find comment box for lead 1
+2026-06-22 05:07:52,753 - comment_worker - INFO - Posting comment for lead 1: https://www.facebook.com/groups/463513024009381/user/100022650241574/?__cft__[0]=AZaltj2mjEidDC4LcKaz7eq-z9qhi8EIYeak_Aj2_XRPKx3c9-wL0Hc0T-h_Wwaimf-p8f6ns-UBv7plxyVA59m23nsLjMfjv1K-BIJPtAdDjlg_iRoMhlhtBKVLa8i_YGXoBiTNy8rVnPq_YB_0lP61SvlORBwWADbn2j-J8gNGR821S9B4_MxqxuSc-vj_8EY&__tn__=R-R
+2026-06-22 05:08:07,820 - comment_worker - INFO - Stopping Comment Worker...
+2026-06-22 05:08:07,913 - comment_worker - ERROR - Could not find comment box for lead 1
+2026-06-22 05:08:08,282 - comment_worker - ERROR - Failed to post comment for lead 1
+2026-06-22 05:08:08,923 - comment_worker - ERROR - Error in posting comments: BrowserContext.close: Target page, context or browser has been closed
+2026-06-22 05:08:08,924 - comment_worker - WARNING - Failed to post 1 comments
+2026-06-22 05:08:17,834 - comment_worker - INFO - Comment Worker stopped
+2026-06-22 05:14:18,542 - comment_worker - INFO - Comment Worker initialized
+2026-06-22 05:14:18,554 - comment_worker - INFO - Comment Worker started
+2026-06-22 05:14:18,560 - comment_worker - INFO - Comment Worker is running. Press Ctrl+C to stop.
+2026-06-22 05:20:31,203 - comment_worker - INFO - Stopping Comment Worker...
+2026-06-22 05:20:38,706 - comment_worker - INFO - Comment Worker stopped

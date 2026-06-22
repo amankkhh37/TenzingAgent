@@ -6,7 +6,7 @@ import time
 import threading
 from typing import List, Optional
 from datetime import datetime
-from playwright.sync_api import sync_playwright, Page, BrowserContext
+from playwright.sync_api import Page
 from database import (
     LeadDatabase, GroupDatabase, SettingsDatabase, DailyStatsDatabase,
     AuditLogDatabase, init_db
@@ -15,9 +15,10 @@ from lead_scorer import LeadScorer
 from comment_generator import CommentGenerator
 from config import (
     FACEBOOK_PROFILE_PATH, FACEBOOK_HEADLESS, MAX_SCROLLS, 
-    SCAN_INTERVAL, GROUP_URLS
+    SCAN_INTERVAL, GROUP_URLS, SCAN_LOGIN_WAIT_SECONDS, REQUIRE_LOGIN_BEFORE_SCAN
 )
 from logger import scanner_logger
+from browser_manager import BrowserManager
 
 class FacebookScanner:
     """Continuously scan Facebook groups for travel leads"""
@@ -98,31 +99,71 @@ class FacebookScanner:
     def _scan_groups(self, group_urls: List[str]):
         """Scan multiple groups"""
         try:
-            with sync_playwright() as p:
-                context = p.chromium.launch_persistent_context(
-                    FACEBOOK_PROFILE_PATH,
-                    headless=FACEBOOK_HEADLESS,
-                    args=[
-                        "--disable-blink-features=AutomationControlled",
-                        "--disable-dev-shm-usage",
-                        "--no-first-run",
-                        "--no-default-browser-check"
-                    ]
-                )
-                
-                page = context.new_page()
-                
-                for group_url in group_urls:
-                    if not self.running:
-                        break
-                    try:
-                        self._scan_single_group(page, group_url)
-                    except Exception as e:
-                        scanner_logger.error(f"Error scanning group {group_url}: {e}")
-                
-                context.close()
+            debug_visible_browser = SettingsDatabase.get_setting("debug_visible_browser", "false").lower() == "true"
+            use_headless = FACEBOOK_HEADLESS and not debug_visible_browser
+            scanner_logger.info(
+                f"Attaching scanner to shared browser (headless={use_headless}, profile={FACEBOOK_PROFILE_PATH})"
+            )
+
+            page = BrowserManager.get_or_create_page(headless=use_headless)
+            scanner_logger.info("Scanner attached to shared browser page")
+
+            if REQUIRE_LOGIN_BEFORE_SCAN:
+                if not self._wait_for_login(page):
+                    scanner_logger.warning(
+                        "Facebook login not detected within grace period. Skipping this scan cycle."
+                    )
+                    return
+
+            for group_url in group_urls:
+                if not self.running:
+                    break
+                try:
+                    self._scan_single_group(page, group_url)
+                except Exception as e:
+                    scanner_logger.error(f"Error scanning group {group_url}: {e}")
         except Exception as e:
             scanner_logger.error(f"Error in browser context: {e}")
+
+    def _is_logged_in(self, page: Page) -> bool:
+        """Best-effort check for an active Facebook login session."""
+        try:
+            current_url = page.url or ""
+            if "facebook.com/login" in current_url:
+                return False
+
+            # If home/feed/groups loads and login form is absent, treat as logged in.
+            login_inputs = page.query_selector('input[name="email"], input[name="pass"]')
+            if login_inputs:
+                return False
+
+            return True
+        except Exception:
+            return False
+
+    def _wait_for_login(self, page: Page) -> bool:
+        """Give user time to authenticate before scanning starts."""
+        try:
+            page.goto("https://www.facebook.com/", wait_until="domcontentloaded", timeout=60000)
+        except Exception:
+            # Continue with polling even if initial navigation is flaky.
+            pass
+
+        start = time.time()
+        wait_seconds = max(0, SCAN_LOGIN_WAIT_SECONDS)
+        scanner_logger.info(
+            f"Waiting up to {wait_seconds}s for Facebook login before scanning..."
+        )
+
+        while self.running and (time.time() - start) <= wait_seconds:
+            if self._is_logged_in(page):
+                scanner_logger.info("Facebook login/session detected. Starting scan.")
+                return True
+            scanner_logger.debug("Waiting for Facebook login/session...")
+            time.sleep(2)
+
+        scanner_logger.warning("Facebook login/session was not detected before timeout")
+        return False
     
     def _scan_single_group(self, page: Page, group_url: str):
         """Scan a single Facebook group"""

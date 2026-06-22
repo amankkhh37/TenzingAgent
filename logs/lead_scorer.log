@@ -55,3 +55,195 @@
 2026-06-21 15:16:33,930 - lead_scorer - ERROR - Error generating reply: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
 2026-06-21 15:17:02,689 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Package
 2026-06-21 15:17:32,694 - lead_scorer - ERROR - Error generating reply: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2026-06-22 06:06:08,583 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:06:08,583 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:06:08,584 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:06:08,584 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:06:12,695 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:06:12,695 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:06:12,695 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:06:12,695 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:06:53,883 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:06:53,883 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:06:53,883 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:06:53,883 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:06:58,012 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:06:58,012 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:06:58,012 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:06:58,012 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:05,256 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:05,256 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:05,257 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:05,257 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:09,384 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:09,384 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:09,384 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:09,384 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:16,570 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:16,570 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:16,571 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:16,571 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:20,664 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:20,664 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:20,665 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:20,665 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:27,841 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:27,841 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:27,842 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:27,842 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:31,979 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:31,979 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:31,979 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:31,979 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:49,964 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:49,964 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:49,965 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:49,965 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:54,094 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:54,094 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:07:54,095 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:07:54,095 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:08:01,258 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:08:01,258 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:08:01,258 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:08:01,258 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:08:05,385 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:08:05,385 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:08:05,386 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:08:05,386 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:08:36,318 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:08:36,318 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:08:36,349 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:08:36,349 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:08:40,496 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:08:40,496 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:08:40,497 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:08:40,497 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:08:47,661 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:08:47,661 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:08:47,662 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:08:47,662 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:08:51,741 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:08:51,741 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:08:51,742 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:08:51,742 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:00,018 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:00,018 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:00,019 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:00,019 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:04,130 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:04,130 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:04,130 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:04,130 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:17,413 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:17,413 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:17,579 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:17,579 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:24,971 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:24,971 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:24,972 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:24,972 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:29,089 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:29,089 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:29,090 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:29,090 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:33,216 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:33,216 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:33,216 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:33,216 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:40,403 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:40,403 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:40,404 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:40,404 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:44,530 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:44,530 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:44,530 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:44,530 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:48,626 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:48,626 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:48,626 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:48,626 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:52,748 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:52,748 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:52,748 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:52,748 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:56,882 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:56,882 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:09:56,883 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:09:56,883 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:10:00,991 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:10:00,991 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:10:00,993 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:10:00,993 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:10:08,162 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:10:08,162 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:10:08,163 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:10:08,163 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:10:12,275 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:10:12,275 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:10:12,275 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:10:12,275 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:10:16,398 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:10:16,398 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:10:16,399 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:10:16,399 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:10:20,507 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:10:20,507 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:10:20,508 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:10:20,508 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:12:44,041 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:12:44,041 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:12:44,041 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:12:44,041 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:12:48,160 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:12:48,160 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:12:48,161 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:12:48,161 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:12:55,491 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:12:55,491 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:12:55,499 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:12:55,499 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:01,196 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:01,196 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:01,196 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:01,196 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:08,356 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:08,356 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:08,357 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:08,357 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:12,464 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:12,464 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:12,512 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:12,512 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:33,982 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:33,982 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:33,983 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:33,983 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:38,099 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:38,099 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:38,100 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:38,100 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:45,272 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:45,272 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:45,331 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:45,331 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:49,554 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:49,554 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:49,558 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:49,558 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:56,745 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:56,745 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:13:56,747 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:13:56,747 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:14:00,850 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:14:00,850 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:14:00,851 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:14:00,851 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:14:08,016 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:14:08,016 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:14:08,016 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:14:08,016 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:14:12,127 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:14:12,127 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 06:14:12,128 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 06:14:12,128 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured

@@ -9,6 +9,11 @@ import plotly.express as px
 import plotly.graph_objects as go
 from typing import List, Dict
 
+from threading import Thread
+from scanner import FacebookScanner
+from comment_worker import CommentWorker
+from browser_manager import BrowserManager
+
 from database import (
     init_db, LeadDatabase, GroupDatabase, SettingsDatabase,
     DailyStatsDatabase, FollowUpDatabase, AuditLogDatabase, get_session
@@ -16,7 +21,17 @@ from database import (
 from models import Lead
 from analytics import Analytics
 from content_generator import ContentGenerator
-from config import BUSINESS_NAME
+from config import BUSINESS_NAME, LLM_PROVIDER
+
+
+def _facebook_login_worker() -> None:
+    """Open Facebook login using the shared browser context."""
+    try:
+        BrowserManager.open_login_tab()
+    except Exception as e:
+        st.session_state["fb_login_error"] = str(e)
+    finally:
+        st.session_state["fb_login_running"] = False
 
 # Page configuration
 st.set_page_config(
@@ -49,20 +64,83 @@ st.markdown("""
 with st.sidebar:
     st.image("https://img.icons8.com/color/96/000000/globe.png", width=80)
     st.title(BUSINESS_NAME)
+    st.caption(f"LLM Provider Mode: {LLM_PROVIDER}")
     st.divider()
     
     # Scanner Controls
     st.subheader("🔍 Scanner Controls")
     
+    scanner_state = st.session_state.get("scanner")
+    comment_worker_state = st.session_state.get("comment_worker")
+    
+    if "fb_login_running" not in st.session_state:
+        st.session_state["fb_login_running"] = False
+    if "fb_login_error" not in st.session_state:
+        st.session_state["fb_login_error"] = ""
+
+    if st.button("Login to Facebook", use_container_width=True):
+        if st.session_state["fb_login_running"]:
+            st.info("Facebook login browser is already open.")
+        else:
+            st.session_state["fb_login_running"] = True
+            st.session_state["fb_login_error"] = ""
+            Thread(target=_facebook_login_worker, daemon=True).start()
+            st.success("Browser launched. Please log in. Scanner will reuse this same session.")
+
+    if st.button("I have completed Facebook login", use_container_width=True):
+        SettingsDatabase.set_setting("facebook_login_validated", "true")
+        SettingsDatabase.set_setting("facebook_login_validated_at", datetime.utcnow().isoformat())
+        st.success("Facebook login marked as validated and saved.")
+
+    if st.session_state.get("fb_login_error"):
+        st.error(f"Facebook login error: {st.session_state['fb_login_error']}")
+
+    validated_login = SettingsDatabase.get_setting("facebook_login_validated", "false").lower() == "true"
+    validated_login_at = SettingsDatabase.get_setting("facebook_login_validated_at", "")
+    if validated_login:
+        st.caption(f"Login status: validated ({validated_login_at or 'timestamp unavailable'})")
+    else:
+        st.caption("Login status: not validated")
+            
     col1, col2 = st.columns(2)
     with col1:
-        if st.button("▶️ Start Scanner", use_container_width=True):
-            SettingsDatabase.set_setting("scan_enabled", "true")
-            st.success("Scanner started!")
+        if st.button("Start Scanner"):
+            if not scanner_state:
+                SettingsDatabase.set_setting("scan_enabled", "true")
+                SettingsDatabase.set_setting("debug_visible_browser", "true")
+                scanner_state = FacebookScanner()
+                st.session_state["scanner"] = scanner_state
+                Thread(target=scanner_state.start, daemon=True).start()
+                st.success("Scanner started.")
+            else:
+                st.warning("Scanner is already running.")
     with col2:
-        if st.button("⏸️ Stop Scanner", use_container_width=True):
-            SettingsDatabase.set_setting("scan_enabled", "false")
-            st.warning("Scanner paused")
+        if st.button("Stop Scanner"):
+            if scanner_state and scanner_state.running:
+                scanner_state.stop()
+                st.session_state.pop("scanner", None)
+                st.warning("Scanner stopped.")
+            else:
+                st.info("Scanner is not running.")
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("Start Comment Worker"):
+            if not comment_worker_state:
+                comment_worker_state = CommentWorker()
+                st.session_state["comment_worker"] = comment_worker_state
+                Thread(target=comment_worker_state.start, daemon=True).start()
+                st.success("Comment worker started.")
+            else:
+                st.warning("Comment worker is already running.")
+    with col2:
+        if st.button("Stop Comment Worker"):
+            if comment_worker_state and comment_worker_state.running:
+                comment_worker_state.stop()
+                st.session_state.pop("comment_worker", None)
+                st.warning("Comment worker stopped.")
+            else:
+                st.info("Comment Worker is not running.")
     
     # Posting Controls
     st.subheader("💬 Posting Controls")
@@ -408,7 +486,14 @@ with tabs[7]:
         top_groups = Analytics.get_top_groups(limit=10)
         if top_groups:
             df = pd.DataFrame(top_groups, columns=['Group', 'Count'])
-            fig = px.barh(df, x='Count', y='Group', color='Count', color_continuous_scale='Plasma')
+            fig = px.bar(
+                df,
+                x='Count',
+                y='Group',
+                orientation='h',
+                color='Count',
+                color_continuous_scale='Plasma'
+            )
             st.plotly_chart(fig, use_container_width=True)
     
     st.divider()
