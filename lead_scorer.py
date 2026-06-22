@@ -51,7 +51,7 @@ class LeadScorer:
             }
         """
         
-        prompt = f"""Analyze this Facebook post from a travel perspective. Extract information and score it as a potential lead for a travel company (Sikkim Tours & Cabs).
+        prompt = f"""Analyze this Facebook post from a travel perspective. Extract information and score it as a potential lead for a travel company (Sikkim Tours & Cabs).Sikkim Tours & Cabs only plans for Tours in Sikkim, Siliguri, Darjeeling, Kalimpong areas.
 
 POST AUTHOR: {author}
 POST TEXT:

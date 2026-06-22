@@ -1,20 +1,119 @@
-2026-06-22 09:26:12,609 - lead_scorer - INFO - LLM provider selected: azure
-2026-06-22 09:26:12,609 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
-2026-06-22 09:26:22,752 - lead_scorer - INFO - LLM provider selected: azure
-2026-06-22 09:26:22,752 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
-2026-06-22 09:26:30,134 - lead_scorer - INFO - LLM provider selected: azure
-2026-06-22 09:26:30,135 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
-2026-06-22 09:26:34,356 - lead_scorer - INFO - LLM provider selected: azure
-2026-06-22 09:26:34,356 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
-2026-06-22 09:26:41,759 - lead_scorer - INFO - LLM provider selected: azure
-2026-06-22 09:26:41,759 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
-2026-06-22 09:26:45,950 - lead_scorer - INFO - LLM provider selected: azure
-2026-06-22 09:26:45,950 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
-2026-06-22 09:26:53,633 - lead_scorer - INFO - LLM provider selected: azure
-2026-06-22 09:26:53,633 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
-2026-06-22 09:26:58,034 - lead_scorer - INFO - LLM provider selected: azure
-2026-06-22 09:26:58,035 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
-2026-06-22 09:36:38,260 - lead_scorer - INFO - LLM provider selected: azure
-2026-06-22 09:36:38,261 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
-2026-06-22 09:36:43,072 - lead_scorer - INFO - LLM provider selected: azure
-2026-06-22 09:36:43,072 - lead_scorer - ERROR - Error analyzing post: AZURE_OPENAI_API_KEY is not configured
+2026-06-22 11:15:52,804 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:16:01,390 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Hotel
+2026-06-22 11:16:05,488 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:16:13,281 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:16:19,665 - lead_scorer - INFO - Post analyzed: score=8, intent=Group Tour
+2026-06-22 11:16:23,714 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:16:44,743 - lead_scorer - ERROR - Error generating reply: HTTPSConnectionPool(host='amanbyguptaaccenture.services.ai.azure.com', port=443): Max retries exceeded with url: /openai/deployments/gpt-4o/chat/completions?api-version=2024-10-21 (Caused by ConnectTimeoutError(<HTTPSConnection(host='amanbyguptaaccenture.services.ai.azure.com', port=443) at 0x22e4583a0d0>, 'Connection to amanbyguptaaccenture.services.ai.azure.com timed out. (connect timeout=30)'))
+2026-06-22 11:16:49,053 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:16:56,476 - lead_scorer - INFO - Post analyzed: score=5, intent=Group Tour
+2026-06-22 11:17:01,236 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:17:13,039 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:17:18,514 - lead_scorer - INFO - Post analyzed: score=8, intent=Group Tour
+2026-06-22 11:17:22,612 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:17:53,762 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:18:01,296 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:19:01,694 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:19:04,257 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:19:08,411 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:19:10,643 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:19:17,993 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:19:20,847 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:19:25,136 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:19:27,669 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:19:31,969 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:19:39,383 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-22 11:19:44,033 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:19:46,926 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:19:55,827 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:19:59,260 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:20:04,270 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:20:10,434 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-22 11:20:14,633 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:20:17,625 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:20:21,985 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:20:25,387 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Package
+2026-06-22 11:20:29,448 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:20:41,482 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:20:48,315 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-22 11:20:53,516 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:20:55,937 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:21:06,382 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:21:09,193 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Cab
+2026-06-22 11:21:13,542 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:21:42,272 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:21:55,647 - lead_scorer - INFO - Post analyzed: score=5, intent=General Discussion
+2026-06-22 11:21:59,841 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:22:13,143 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:22:22,127 - lead_scorer - INFO - Post analyzed: score=8, intent=Need Package
+2026-06-22 11:22:26,900 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:22:54,876 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:22:58,478 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:23:03,082 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:23:10,744 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-22 11:23:19,025 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:23:22,208 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:23:26,727 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:23:34,373 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-22 11:23:39,331 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:23:41,584 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:23:45,874 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:23:50,387 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Hotel
+2026-06-22 11:23:54,486 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:24:05,130 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:24:07,913 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:24:12,202 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:24:16,847 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-22 11:24:21,886 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:24:27,380 - lead_scorer - INFO - Post analyzed: score=5, intent=General Discussion
+2026-06-22 11:24:31,519 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:24:53,446 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:24:56,937 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:25:05,791 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:25:08,484 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:25:19,015 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:25:40,502 - lead_scorer - ERROR - Error analyzing post: HTTPSConnectionPool(host='amanbyguptaaccenture.services.ai.azure.com', port=443): Max retries exceeded with url: /openai/deployments/gpt-4o/chat/completions?api-version=2024-10-21 (Caused by ConnectTimeoutError(<HTTPSConnection(host='amanbyguptaaccenture.services.ai.azure.com', port=443) at 0x22e45839d10>, 'Connection to amanbyguptaaccenture.services.ai.azure.com timed out. (connect timeout=30)'))
+2026-06-22 11:26:00,759 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:26:04,222 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:26:11,592 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:26:14,644 - lead_scorer - INFO - Post analyzed: score=8, intent=Need Package
+2026-06-22 11:26:18,915 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:27:19,665 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:27:29,781 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Package
+2026-06-22 11:27:34,083 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:27:46,674 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:27:50,348 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:27:54,837 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:27:59,931 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:28:18,835 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:28:26,867 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:28:34,020 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:28:37,824 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:28:50,826 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:28:54,380 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:28:59,049 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:29:03,383 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:29:18,086 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:29:22,599 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 11:29:32,321 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 11:29:37,471 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 12:14:19,001 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 12:14:30,787 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 12:14:35,226 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 12:14:38,730 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 12:14:50,661 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 12:14:56,326 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 12:15:00,745 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 12:15:04,659 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 12:15:13,981 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 12:15:25,495 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 12:15:29,785 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 12:15:33,968 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 12:15:46,030 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 12:15:53,655 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 12:15:58,115 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 12:16:02,888 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 12:16:21,593 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 12:16:32,397 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-22 12:16:46,742 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-22 12:17:01,937 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead

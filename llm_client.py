@@ -1,6 +1,6 @@
 """
 Shared LLM client with provider fallback support.
-Supports Ollama and Azure OpenAI-compatible Responses API.
+Supports Ollama and Azure OpenAI chat completions.
 """
 from __future__ import annotations
 
@@ -49,48 +49,56 @@ class LLMClient:
         data = response.json()
         return (data.get("response") or "").strip()
 
-    def _generate_azure(self, prompt: str) -> Optional[str]:
+    def _raise_for_status_with_body(self, response: requests.Response) -> None:
+        try:
+            response.raise_for_status()
+        except requests.HTTPError as e:
+            body = response.text[:1000] if response.text else ""
+            raise requests.HTTPError(f"{e}; response body: {body}", response=response) from e
+
+    def _generate_azure(self, prompt: str, expect_json: bool = False) -> Optional[str]:
         if not AZURE_OPENAI_API_KEY:
             raise RuntimeError("AZURE_OPENAI_API_KEY is not configured")
+        if not AZURE_OPENAI_ENDPOINT:
+            raise RuntimeError("AZURE_OPENAI_ENDPOINT is not configured")
+        if not AZURE_OPENAI_DEPLOYMENT:
+            raise RuntimeError("AZURE_OPENAI_DEPLOYMENT is not configured")
 
-        endpoint = f"{AZURE_OPENAI_ENDPOINT.rstrip('/')}/openai/v1/responses"
+        endpoint = (
+            f"{AZURE_OPENAI_ENDPOINT.rstrip('/')}/openai/deployments/"
+            f"{AZURE_OPENAI_DEPLOYMENT}/chat/completions"
+        )
         headers = {
-            "Authorization": f"Bearer {AZURE_OPENAI_API_KEY}",
+            "api-key": AZURE_OPENAI_API_KEY,
             "Content-Type": "application/json",
         }
         payload = {
-            "model": AZURE_OPENAI_DEPLOYMENT,
-            "input": prompt,
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "You are a concise assistant that returns valid JSON when requested.",
+                },
+                {"role": "user", "content": prompt},
+            ],
+            "temperature": 0.2,
         }
-
-        # Some deployments require api-version as query parameter.
-        params = {}
-        if AZURE_OPENAI_API_VERSION:
-            params["api-version"] = AZURE_OPENAI_API_VERSION
+        if expect_json:
+            payload["response_format"] = {"type": "json_object"}
 
         response = requests.post(
             endpoint,
             headers=headers,
             json=payload,
-            params=params,
+            params={"api-version": AZURE_OPENAI_API_VERSION},
             timeout=OLLAMA_TIMEOUT,
         )
-        response.raise_for_status()
+        self._raise_for_status_with_body(response)
         data = response.json()
-
-        # Responses API can return output_text directly.
-        text = data.get("output_text")
-        if text:
-            return text.strip()
-
-        # Fallback parse for structured output arrays.
-        output = data.get("output", [])
-        collected = []
-        for item in output:
-            for content in item.get("content", []):
-                if content.get("type") == "output_text":
-                    collected.append(content.get("text", ""))
-        return "\n".join(t for t in collected if t).strip()
+        choices = data.get("choices") or []
+        if not choices:
+            return None
+        message = choices[0].get("message") or {}
+        return (message.get("content") or "").strip()
 
     def generate(self, prompt: str, expect_json: bool = False) -> Optional[str]:
         """Generate text using selected provider strategy."""
@@ -100,7 +108,7 @@ class LLMClient:
             return self._generate_ollama(prompt, expect_json=expect_json)
 
         if provider == "azure":
-            return self._generate_azure(prompt)
+            return self._generate_azure(prompt, expect_json=expect_json)
 
         # auto: prefer local Ollama, fallback to Azure
         if self._check_ollama_available():
@@ -111,4 +119,4 @@ class LLMClient:
                 lead_scorer_logger.warning(f"Ollama generation failed, falling back to Azure: {e}")
 
         lead_scorer_logger.info("LLM provider selected: azure")
-        return self._generate_azure(prompt)
+        return self._generate_azure(prompt, expect_json=expect_json)

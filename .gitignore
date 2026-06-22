@@ -1,4 +1,5 @@
 
+.env
 .env.example
 .facebook_session
 .facebook_session_old
