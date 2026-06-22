@@ -160,6 +160,25 @@ class LeadDatabase:
             ).order_by(Lead.created_at.desc()).all()
         finally:
             session.close()
+            
+    @staticmethod
+    def delete_lead(lead_id: int) -> bool:
+        """Delete lead and associated records (cascaded automatically via SQLAlchemy relationships)"""
+        session = get_session()
+        try:
+            lead = session.query(Lead).filter_by(id=lead_id).first()
+            if not lead:
+                return False
+            session.delete(lead)
+            session.commit()
+            database_logger.info(f"Lead deleted: {lead_id}")
+            return True
+        except Exception as e:
+            session.rollback()
+            database_logger.error(f"Error deleting lead {lead_id}: {e}")
+            return False
+        finally:
+            session.close()
 
 class GroupDatabase:
     """Group management operations"""

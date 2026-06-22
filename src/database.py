@@ -32,6 +32,7 @@ class Database:
                 CREATE TABLE IF NOT EXISTS leads (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     post_id INTEGER,
+                        created_at TEXT DEFAULT (datetime('now')),
                     intent TEXT,
                     destination TEXT,
                     lead_score INTEGER,
@@ -101,6 +102,33 @@ class Database:
                 conn.commit()
         except Exception as e:
             logger.error(f"Error updating lead status: {e}")
+
+    def clear_all_leads(self):
+        try:
+            with sqlite3.connect(self.db_path) as conn:
+                cursor = conn.cursor()
+                cursor.execute('DELETE FROM leads')
+                conn.commit()
+        except Exception as e:
+            logger.error(f"Error clearing all leads: {e}")
+
+    def delete_lead(self, lead_id: int):
+        try:
+            with sqlite3.connect(self.db_path) as conn:
+                cursor = conn.cursor()
+                cursor.execute('DELETE FROM leads WHERE id = ?', (lead_id,))
+                conn.commit()
+        except Exception as e:
+            logger.error(f"Error deleting lead {lead_id}: {e}")
+
+    def delete_multiple_leads(self, lead_ids: List[int]):
+        try:
+            with sqlite3.connect(self.db_path) as conn:
+                cursor = conn.cursor()
+                cursor.executemany('DELETE FROM leads WHERE id = ?', [(lead_id,) for lead_id in lead_ids])
+                conn.commit()
+        except Exception as e:
+            logger.error(f"Error deleting multiple leads: {e}")
 
     def save_comment(self, post_id: int, comment_text: str):
         try:

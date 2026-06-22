@@ -21,6 +21,7 @@ from database import (
 )
 from models import Lead
 from analytics import Analytics
+        # Ensure Date Formatting Inline !!!
 from content_generator import ContentGenerator
 from config import BUSINESS_NAME, FACEBOOK_PROFILE_PATH, LLM_PROVIDER
 
@@ -361,6 +362,35 @@ with tabs[1]:
         
         st.write(f"Showing {len(filtered_leads)} of {len(new_leads)} leads")
         
+        # Bulk Actions for New Leads
+        with st.expander("📦 Bulk Delete Actions for New Leads"):
+            col_bulk1, col_bulk2 = st.columns(2)
+            with col_bulk1:
+                selected_new_leads = st.multiselect(
+                    "Select new leads to delete:",
+                    options=filtered_leads,
+                    format_func=lambda l: f"ID {l.id} - {l.author} ({l.destination or 'N/A'})",
+                    key="bulk_selected_new_leads"
+                )
+                if selected_new_leads:
+                    if st.button("🗑️ Delete Selected Leads", key="btn_delete_selected_new"):
+                        count = 0
+                        for lead in selected_new_leads:
+                            if LeadDatabase.delete_lead(lead.id):
+                                count += 1
+                        st.success(f"Deleted {count} lead(s)!")
+                        st.rerun()
+            with col_bulk2:
+                st.write(f"There are **{len(filtered_leads)}** new leads matching the filter.")
+                confirm_delete_all_new = st.checkbox("I confirm that I want to delete all matching new leads", key="confirm_delete_all_new")
+                if st.button("🗑️ Delete All Matching Leads", key="btn_delete_all_new", disabled=not confirm_delete_all_new):
+                    count = 0
+                    for lead in filtered_leads:
+                        if LeadDatabase.delete_lead(lead.id):
+                            count += 1
+                    st.success(f"Deleted {count} matching lead(s)!")
+                    st.rerun()
+        
         for lead in filtered_leads:
             with st.expander(f"**{lead.author}** - {lead.destination or 'N/A'} (Score: {lead.lead_score}/10)"):
                 col1, col2 = st.columns([2, 1])
@@ -391,6 +421,11 @@ with tabs[1]:
                         LeadDatabase.update_lead(lead.id, status="REJECTED")
                         AuditLogDatabase.log_action(lead.id, "REJECTED", "User rejected")
                         st.warning("Rejected!")
+                        st.rerun()
+
+                    if st.button("🗑️ Delete", key=f"delete_lead_{lead.id}"):
+                        LeadDatabase.delete_lead(lead.id)
+                        st.success("Lead deleted!")
                         st.rerun()
                     
                     if st.session_state.get(f"edit_{lead.id}"):
@@ -589,6 +624,106 @@ with tabs[8]:
             file_name=f"all_leads_{date.today()}.csv",
             mime="text/csv"
         )
+
+        # Bulk actions section
+        st.write("---")
+        st.subheader("📦 Bulk Lead Actions")
+        col_bulk1, col_bulk2 = st.columns(2)
+        with col_bulk1:
+            selected_leads = st.multiselect(
+                "Select leads to delete:",
+                options=filtered_leads,
+                format_func=lambda l: f"ID {l.id} - {l.author} ({l.destination or 'N/A'})",
+                key="bulk_selected_leads"
+            )
+            
+            if selected_leads:
+                st.write(f"Selected **{len(selected_leads)}** lead(s).")
+                if st.button("🗑️ Delete Selected Leads", key="delete_selected_btn"):
+                    for lead in selected_leads:
+                        LeadDatabase.delete_lead(lead.id)
+                    st.success(f"Successfully deleted {len(selected_leads)} lead(s)!")
+                    st.rerun()
+                    
+        with col_bulk2:
+            st.write(f"There are **{len(filtered_leads)}** leads matching current search filters.")
+            
+            # Confirm checkbox to prevent accidental click
+            confirm_delete_all = st.checkbox("I confirm that I want to delete all matching leads", key="confirm_delete_all")
+            if st.button("🗑️ Delete All Matching Leads", key="delete_all_matching_btn", disabled=not confirm_delete_all):
+                count = 0
+                for lead in filtered_leads:
+                    if LeadDatabase.delete_lead(lead.id):
+                        count += 1
+                st.success(f"Successfully deleted {count} matching lead(s)!")
+                st.rerun()
+
+        # Lead management section
+        st.write("---")
+        st.subheader("✏️ Review, Update, or Delete a Lead")
+        lead_options = {f"ID {l.id} - {l.author} ({l.destination or 'No destination'})": l for l in filtered_leads}
+        selected_option = st.selectbox("Select a lead to update or delete:", ["-- Select a lead --"] + list(lead_options.keys()))
+        
+        if selected_option != "-- Select a lead --":
+            selected_lead = lead_options[selected_option]
+            
+            # Show details and editable fields
+            with st.container():
+                col_edit1, col_edit2 = st.columns([2, 1])
+                with col_edit1:
+                    st.write(f"**Author:** {selected_lead.author} | **Group:** {selected_lead.group_name}")
+                    st.write(f"**Post Link:** [View on Facebook]({selected_lead.post_url})")
+                    st.write("**Post Content:**")
+                    st.info(selected_lead.post_text)
+                    
+                    # Editable fields
+                    new_reply = st.text_area("Suggested Reply", value=selected_lead.suggested_reply or "", key=f"all_reply_{selected_lead.id}")
+                    new_notes = st.text_area("Notes", value=selected_lead.notes or "", key=f"all_notes_{selected_lead.id}")
+                
+                with col_edit2:
+                    status_list = ["NEW", "REVIEWING", "APPROVED", "REJECTED", "POSTED", "FOLLOW_UP", "CLOSED"]
+                    try:
+                        status_index = status_list.index(selected_lead.status)
+                    except ValueError:
+                        status_index = 0
+                        
+                    new_status = st.selectbox(
+                        "Status",
+                        status_list,
+                        index=status_index,
+                        key=f"all_status_{selected_lead.id}"
+                    )
+                    new_dest = st.text_input("Destination", value=selected_lead.destination or "", key=f"all_dest_{selected_lead.id}")
+                    new_intent = st.text_input("Intent", value=selected_lead.intent or "", key=f"all_intent_{selected_lead.id}")
+                    new_score = st.slider("Score", 0, 10, int(selected_lead.lead_score or 0), key=f"all_score_{selected_lead.id}")
+                    
+                    st.write("")
+                    c_btn1, c_btn2 = st.columns(2)
+                    with c_btn1:
+                        if st.button("💾 Save Changes", key=f"all_save_{selected_lead.id}", use_container_width=True):
+                            success = LeadDatabase.update_lead(
+                                selected_lead.id,
+                                status=new_status,
+                                destination=new_dest,
+                                intent=new_intent,
+                                lead_score=new_score,
+                                suggested_reply=new_reply,
+                                notes=new_notes
+                            )
+                            if success:
+                                AuditLogDatabase.log_action(selected_lead.id, "UPDATED", f"Updated details via search page. Status: {new_status}")
+                                st.success("Changes saved!")
+                                st.rerun()
+                            else:
+                                st.error("Failed to save changes.")
+                    with c_btn2:
+                        if st.button("🗑️ Delete Lead", key=f"all_delete_{selected_lead.id}", use_container_width=True):
+                            success = LeadDatabase.delete_lead(selected_lead.id)
+                            if success:
+                                st.success("Lead deleted successfully!")
+                                st.rerun()
+                            else:
+                                st.error("Failed to delete lead.")
     else:
         st.info("No leads found matching criteria")
 
@@ -634,7 +769,11 @@ with tabs[9]:
                         st.rerun()
                 with col3:
                     if st.button("🗑️ Delete", key=f"delete_content_{item.id}"):
-                        st.warning("Delete functionality coming soon")
+                        if generator.delete_content(item.id):
+                            st.success("Deleted!")
+                            st.rerun()
+                        else:
+                            st.error("Failed to delete content.")
     else:
         st.info("No content pending review")
 

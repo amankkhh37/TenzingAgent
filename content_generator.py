@@ -139,3 +139,20 @@ Generate a single post ready to share on Facebook:"""
             return False
         finally:
             session.close()
+
+    def delete_content(self, content_id: int) -> bool:
+        """Delete generated content"""
+        session = get_session()
+        try:
+            content = session.query(GeneratedContent).filter_by(id=content_id).first()
+            if content:
+                session.delete(content)
+                session.commit()
+                return True
+            return False
+        except Exception as e:
+            lead_scorer_logger.error(f"Error deleting content: {e}")
+            session.rollback()
+            return False
+        finally:
+            session.close()

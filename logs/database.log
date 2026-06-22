@@ -103,3 +103,49 @@
 2026-06-22 12:20:47,607 - database - INFO - Database initialized at ./data/travel_crm.db
 2026-06-22 12:20:51,618 - database - INFO - Database initialized at ./data/travel_crm.db
 2026-06-22 12:20:58,189 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 12:57:02,404 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 12:57:02,426 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 12:59:13,088 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 12:59:55,989 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:04:53,619 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:04:53,621 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:05:59,484 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:06:04,946 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:06:06,953 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:12:58,407 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:12:58,410 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:16:49,400 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:16:49,403 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:19:09,671 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:19:11,030 - database - INFO - Lead 25 updated
+2026-06-22 13:19:11,081 - database - INFO - Logged action: REJECTED for lead 25
+2026-06-22 13:19:11,331 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:19:25,484 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:19:27,236 - database - INFO - Lead 22 updated
+2026-06-22 13:19:27,299 - database - INFO - Logged action: APPROVED for lead 22
+2026-06-22 13:19:27,523 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:22:40,212 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:22:40,215 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:23:15,357 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:23:15,391 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:45:30,840 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:45:30,842 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:45:43,485 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:45:44,858 - database - INFO - Lead deleted: 16
+2026-06-22 13:45:45,158 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:45:51,404 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:45:52,481 - database - INFO - Lead deleted: 26
+2026-06-22 13:45:52,662 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:45:58,044 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:45:58,909 - database - INFO - Lead deleted: 24
+2026-06-22 13:45:59,128 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:48:14,329 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:48:14,333 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:54:50,827 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:54:50,828 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:55:47,750 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:56:16,536 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:56:25,982 - database - INFO - Database initialized at ./data/travel_crm.db
+2026-06-22 13:56:28,208 - database - INFO - Lead 6 updated
+2026-06-22 13:56:28,261 - database - INFO - Logged action: UPDATED for lead 6
+2026-06-22 13:56:28,550 - database - INFO - Database initialized at ./data/travel_crm.db
