@@ -215,6 +215,36 @@ with st.sidebar:
         SettingsDatabase.set_setting("auto_comment_enabled", "true" if auto_comment_checkbox else "false")
         st.rerun()
     
+    # Scanner Settings
+    st.write("")
+    st.subheader("⚙️ Scanner Settings")
+    
+    # Days limit input
+    scan_max_days_default = int(SettingsDatabase.get_setting("scan_max_days", "2"))
+    scan_max_days = st.number_input(
+        "Scan History Limit (Days)",
+        min_value=1,
+        max_value=30,
+        value=scan_max_days_default,
+        help="Scanner will skip posts older than this number of days."
+    )
+    if scan_max_days != scan_max_days_default:
+        SettingsDatabase.set_setting("scan_max_days", str(scan_max_days))
+        st.rerun()
+        
+    # Interval input
+    scan_interval_minutes_default = int(SettingsDatabase.get_setting("scan_interval_minutes", "15"))
+    scan_interval_minutes = st.number_input(
+        "Scan Cycle Interval (Minutes)",
+        min_value=1,
+        max_value=120,
+        value=scan_interval_minutes_default,
+        help="Time to sleep between scan cycles. Re-runs scanner after this delay."
+    )
+    if scan_interval_minutes != scan_interval_minutes_default:
+        SettingsDatabase.set_setting("scan_interval_minutes", str(scan_interval_minutes))
+        st.rerun()
+    
     st.divider()
     
     # Add Group

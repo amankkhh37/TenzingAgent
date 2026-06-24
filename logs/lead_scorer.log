@@ -354,3 +354,373 @@
 2026-06-24 11:21:06,440 - lead_scorer - INFO - LLM provider selected: azure
 2026-06-24 11:21:09,383 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
 2026-06-24 11:21:13,555 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:21:16,245 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 11:21:23,492 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:21:26,613 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:21:30,820 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:21:33,390 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 11:21:40,662 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:21:43,094 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:21:47,361 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:21:50,189 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 11:21:54,902 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:21:57,870 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 11:22:02,071 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:22:04,913 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Hotel
+2026-06-24 11:22:09,000 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:22:15,770 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:22:19,101 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Cab
+2026-06-24 11:22:23,195 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:22:34,011 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:22:37,270 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:22:41,431 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:22:43,535 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 11:23:16,853 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:23:19,102 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:23:26,936 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:23:29,045 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:23:36,324 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:23:38,881 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:23:46,607 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:23:50,285 - lead_scorer - INFO - Post analyzed: score=5, intent=General Discussion
+2026-06-24 11:23:54,339 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:51:15,846 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:51:18,182 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:51:25,421 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:51:28,331 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:51:32,519 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:51:36,918 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:51:44,126 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:51:46,664 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:51:50,821 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:51:53,233 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:51:57,422 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:51:59,706 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 11:52:06,955 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:52:08,798 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 11:52:12,980 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:52:16,757 - lead_scorer - INFO - Post analyzed: score=5, intent=General Discussion
+2026-06-24 11:52:20,826 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:53:00,736 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:53:03,269 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 11:53:15,706 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:53:19,315 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:53:24,562 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:53:28,084 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:53:35,313 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:53:39,449 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:53:43,647 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:53:46,415 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:53:53,751 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:53:59,461 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:54:03,653 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:54:07,105 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:54:14,279 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:54:17,360 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 11:54:21,530 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 11:54:24,472 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:04:42,378 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:04:44,590 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:04:51,857 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:04:54,391 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:04:58,615 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:05:01,642 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:05:08,877 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:05:11,837 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:05:16,013 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:05:18,426 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:05:22,620 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:05:24,891 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 12:05:32,200 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:05:35,356 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 12:05:42,622 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:05:46,012 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 12:05:56,924 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:06:00,841 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:06:05,059 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:06:08,358 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:06:15,604 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:06:19,281 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:06:23,479 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:06:26,358 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:06:33,577 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:06:36,303 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:06:40,483 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:06:43,154 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:06:50,396 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:06:53,463 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:06:57,627 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:07:00,254 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:28:31,574 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:28:34,219 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:28:38,375 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:28:41,058 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:28:48,285 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:28:51,629 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:28:55,799 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:28:58,666 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:29:05,938 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:29:08,430 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:29:12,597 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:29:15,952 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:29:20,122 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:29:22,694 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:29:29,927 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:29:32,960 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:29:37,108 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:29:39,894 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:29:44,062 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:29:47,064 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 12:29:54,386 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:29:58,210 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 12:30:05,437 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:30:08,296 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 12:30:18,839 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:30:23,410 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:30:27,610 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:30:31,118 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:30:38,376 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:30:40,951 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:30:45,151 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:30:48,656 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:36:39,788 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:36:43,172 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Hotel
+2026-06-24 12:36:47,265 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:37:45,878 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:37:49,497 - lead_scorer - INFO - Post analyzed: score=5, intent=General Discussion
+2026-06-24 12:37:53,576 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:38:49,381 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:38:53,443 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Hotel
+2026-06-24 12:38:57,524 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:40:19,611 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:40:21,955 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:40:26,133 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:40:28,823 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:40:36,248 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:40:40,699 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:40:44,882 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:40:51,174 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:40:55,362 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:40:58,808 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:41:06,346 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:41:09,419 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:41:13,650 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:41:16,025 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:41:20,221 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:41:23,608 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:41:27,788 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:41:30,904 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:41:38,115 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:41:42,109 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:41:46,288 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:41:50,304 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:41:54,591 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:41:57,034 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:42:01,222 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:42:03,510 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:42:10,693 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:42:13,385 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:42:17,564 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:42:20,574 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:42:24,767 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:42:27,547 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:42:31,708 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:42:36,122 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Hotel
+2026-06-24 12:42:40,175 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:43:53,993 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:43:57,127 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:44:01,303 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:44:04,126 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:44:08,333 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:44:12,173 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:44:16,407 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:44:19,860 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:44:24,034 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:44:26,394 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:44:33,593 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:44:36,468 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:44:40,664 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:44:43,381 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:44:47,877 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:44:50,812 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:44:55,032 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:44:58,458 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:45:02,683 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:45:06,003 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:45:13,258 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:45:15,959 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:45:20,157 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:45:22,750 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:45:26,913 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:45:29,799 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Hotel
+2026-06-24 12:45:33,892 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:46:38,219 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:46:41,058 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:46:45,237 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:46:48,418 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Package
+2026-06-24 12:46:52,479 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:52:51,668 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:52:54,483 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:53:01,904 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:53:04,845 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:53:12,422 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:53:15,341 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 12:53:22,706 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:53:25,880 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 12:53:30,221 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:53:32,564 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:53:36,744 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:53:40,394 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:53:47,790 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:53:52,197 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 12:53:56,448 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:53:59,368 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:54:03,560 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:54:08,554 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:54:15,819 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:54:18,459 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:54:22,649 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:54:25,386 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:54:29,698 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:54:33,379 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 12:54:37,670 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:54:42,707 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:54:49,932 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:54:52,585 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 12:54:56,783 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:55:00,338 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:55:07,533 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:55:10,391 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 12:55:14,588 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:55:17,815 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:55:21,996 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:55:24,758 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:55:28,962 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:55:31,695 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:55:35,888 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:55:39,022 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:55:46,241 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:55:49,864 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:55:54,030 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:55:56,874 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:56:01,062 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:56:04,233 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:56:08,438 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:56:11,597 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:56:15,781 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:56:18,655 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:56:22,814 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:56:25,741 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:56:33,324 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:56:36,839 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:56:41,028 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:56:43,289 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:56:47,464 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:56:50,157 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:56:54,559 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:56:58,204 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Hotel
+2026-06-24 12:57:02,264 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:58:50,338 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:58:53,606 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:59:01,232 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:59:03,558 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:59:07,793 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:59:11,223 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:59:18,468 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:59:20,875 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:59:25,064 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:59:27,390 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:59:31,555 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:59:33,969 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:59:41,163 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:59:44,161 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:59:48,379 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:59:50,890 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 12:59:55,092 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 12:59:57,937 - lead_scorer - INFO - Post analyzed: score=5, intent=General Discussion
+2026-06-24 13:00:02,005 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:01:21,913 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:01:27,171 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:01:31,371 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:01:34,398 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:01:42,846 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:01:49,559 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:01:53,768 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:01:56,251 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:02:46,190 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:02:49,298 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:02:53,497 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:02:58,035 - lead_scorer - INFO - Post analyzed: score=5, intent=Need Cab
+2026-06-24 13:03:02,108 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:24:52,472 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:24:56,434 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 13:25:00,633 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:25:04,180 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:25:11,706 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:25:15,371 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 13:25:19,553 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:25:22,183 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:25:29,485 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:25:33,104 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 13:25:37,303 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:25:41,428 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:25:45,601 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:25:48,556 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:25:52,728 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:25:56,163 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:26:00,358 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:26:04,015 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:26:11,465 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:26:15,315 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 13:26:19,518 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:26:22,218 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:26:26,424 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:26:30,109 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:26:34,287 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:26:37,170 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:26:41,353 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:26:46,361 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:26:50,540 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:26:54,133 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:26:58,307 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:27:02,268 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:27:09,576 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:27:12,400 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:27:16,593 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:27:19,915 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:27:24,143 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:27:27,886 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:27:32,107 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:27:35,274 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:27:39,457 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:27:42,771 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:27:50,137 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:27:52,840 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:27:57,030 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:28:00,393 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:28:04,576 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:28:07,898 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:28:12,080 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:28:15,010 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:28:19,471 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:28:23,308 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 13:28:27,504 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:28:30,747 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:28:34,919 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:28:38,437 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:28:45,803 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:28:49,103 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 13:28:53,321 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:28:55,928 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:29:00,125 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:29:02,721 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:29:10,103 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:29:14,697 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:29:18,905 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:29:22,219 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:29:26,469 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:29:29,558 - lead_scorer - INFO - Post analyzed: score=0, intent=General Discussion
+2026-06-24 13:29:36,845 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:29:40,467 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead
+2026-06-24 13:29:44,643 - lead_scorer - INFO - LLM provider selected: azure
+2026-06-24 13:29:48,406 - lead_scorer - INFO - Post analyzed: score=0, intent=Not A Lead

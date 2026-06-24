@@ -55,3 +55,175 @@
 2026-06-24 11:24:00,604 - scanner - INFO - Group 'Notifications': 114 posts, 9 leads found
 2026-06-24 11:24:01,427 - scanner - INFO - Scan complete, sleeping for 300 seconds
 2026-06-24 11:24:01,428 - scanner - INFO - Scanner stopped
+2026-06-24 11:50:21,584 - scanner - INFO - Facebook Scanner initialized
+2026-06-24 11:50:21,695 - scanner - INFO - Scanner started
+2026-06-24 11:50:21,704 - scanner - INFO - Starting group scan of 3 groups
+2026-06-24 11:50:21,980 - scanner - INFO - Using scanner-owned browser for group scan (headless=False, profile=./.facebook_session)
+2026-06-24 11:50:26,303 - scanner - INFO - Opening scanner-owned Facebook browser (headless=False, profile=./.facebook_session)
+2026-06-24 11:50:27,982 - scanner - INFO - Scanner browser page ready for group scan
+2026-06-24 11:50:31,351 - scanner - INFO - Waiting up to 120s for Facebook login before scanning...
+2026-06-24 11:50:31,373 - scanner - INFO - Facebook login/session detected. Starting scan.
+2026-06-24 11:50:31,373 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1D8XzzmEuv/
+2026-06-24 11:51:04,468 - scanner - INFO - Group 'SIKKIM TOURISM': 0 posts, 0 leads found
+2026-06-24 11:51:04,468 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1CbxH7SH6m/
+2026-06-24 11:52:22,665 - scanner - INFO - Posting comment immediately for lead 49 at https://www.facebook.com/groups/2021962444786761/posts/4421750508141264/?comment_id=4421758834807098&__cft__[0]=AZbvFVLRi0JbbunlZFoPNDF9ROrz5E5ps8e_zeDl8fS1PV59vrFafasID48z2FBX1Qcv1e0qbsNGzby4KLfj-UNAQUZ6eHOGHQVvsOZkFeZ3c_MKeF0c2XafI0-FTonEMcVCpXEZJ0wVnAUaxT2PbB3222C3S1WPO3WAAArKuBGA3Cl0kx_c_duEoVAO8fRyTh4&__tn__=R-R
+2026-06-24 11:52:27,772 - scanner - INFO - Targeting comment reply thread for comment_id: 4421758834807098
+2026-06-24 11:52:37,837 - scanner - INFO - Found comment container with selector: div[role="article"]:has(a[href*="4421758834807098"])
+2026-06-24 11:52:37,859 - scanner - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 11:52:43,417 - scanner - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 11:52:53,302 - scanner - INFO - Successfully posted comment inline for lead 49
+2026-06-24 11:52:53,461 - scanner - INFO - Saved new lead 49 from Unknown (status: APPROVED)
+2026-06-24 11:54:24,664 - scanner - INFO - Group 'North Bengal & Sikkim Tour and Guide (NBSTG) Siliguri Njp Based': 27 posts, 1 leads found
+2026-06-24 11:54:24,665 - scanner - INFO - Scanning group: https://www.facebook.com/
+2026-06-24 11:54:56,621 - scanner - INFO - Group 'Facebook Menu': 0 posts, 0 leads found
+2026-06-24 11:54:57,358 - scanner - INFO - Scan complete, sleeping for 20 minutes
+2026-06-24 12:03:50,660 - scanner - INFO - Facebook Scanner initialized
+2026-06-24 12:03:50,663 - scanner - INFO - Scanner started
+2026-06-24 12:03:50,663 - scanner - INFO - Starting group scan of 3 groups
+2026-06-24 12:03:50,833 - scanner - INFO - Using scanner-owned browser for group scan (headless=False, profile=./.facebook_session)
+2026-06-24 12:03:53,853 - scanner - INFO - Opening scanner-owned Facebook browser (headless=False, profile=./.facebook_session)
+2026-06-24 12:03:55,736 - scanner - INFO - Scanner browser page ready for group scan
+2026-06-24 12:03:59,276 - scanner - INFO - Waiting up to 120s for Facebook login before scanning...
+2026-06-24 12:03:59,329 - scanner - INFO - Facebook login/session detected. Starting scan.
+2026-06-24 12:03:59,330 - scanner - INFO - Scanning group: https://www.facebook.com/
+2026-06-24 12:04:31,809 - scanner - INFO - Group 'Facebook Menu': 0 posts, 0 leads found
+2026-06-24 12:04:31,810 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1CbxH7SH6m/
+2026-06-24 12:07:00,432 - scanner - INFO - Group 'North Bengal & Sikkim Tour and Guide (NBSTG) Siliguri Njp Based': 26 posts, 0 leads found
+2026-06-24 12:07:00,433 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1D8XzzmEuv/
+2026-06-24 12:07:34,379 - scanner - INFO - Group 'SIKKIM TOURISM': 0 posts, 0 leads found
+2026-06-24 12:07:35,053 - scanner - INFO - Scan complete, sleeping for 20 minutes
+2026-06-24 12:27:35,056 - scanner - INFO - Starting group scan of 3 groups
+2026-06-24 12:27:35,057 - scanner - INFO - Using scanner-owned browser for group scan (headless=False, profile=./.facebook_session)
+2026-06-24 12:27:35,534 - scanner - INFO - Opening scanner-owned Facebook browser (headless=False, profile=./.facebook_session)
+2026-06-24 12:27:39,880 - scanner - INFO - Scanner browser page ready for group scan
+2026-06-24 12:27:43,134 - scanner - INFO - Waiting up to 120s for Facebook login before scanning...
+2026-06-24 12:27:43,169 - scanner - INFO - Facebook login/session detected. Starting scan.
+2026-06-24 12:27:43,169 - scanner - INFO - Scanning group: https://www.facebook.com/
+2026-06-24 12:28:18,291 - scanner - INFO - Group 'Facebook Menu': 0 posts, 0 leads found
+2026-06-24 12:28:18,292 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1CbxH7SH6m/
+2026-06-24 12:30:48,745 - scanner - INFO - Group 'North Bengal & Sikkim Tour and Guide (NBSTG) Siliguri Njp Based': 23 posts, 0 leads found
+2026-06-24 12:30:48,754 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1D8XzzmEuv/
+2026-06-24 12:31:22,496 - scanner - INFO - Group 'SIKKIM TOURISM': 0 posts, 0 leads found
+2026-06-24 12:31:23,147 - scanner - INFO - Scan complete, sleeping for 5 minutes
+2026-06-24 12:36:23,150 - scanner - INFO - Starting group scan of 5 groups
+2026-06-24 12:36:23,151 - scanner - INFO - Using scanner-owned browser for group scan (headless=False, profile=./.facebook_session)
+2026-06-24 12:36:23,619 - scanner - INFO - Opening scanner-owned Facebook browser (headless=False, profile=./.facebook_session)
+2026-06-24 12:36:25,042 - scanner - INFO - Scanner browser page ready for group scan
+2026-06-24 12:36:27,906 - scanner - INFO - Waiting up to 120s for Facebook login before scanning...
+2026-06-24 12:36:27,929 - scanner - INFO - Facebook login/session detected. Starting scan.
+2026-06-24 12:36:27,930 - scanner - INFO - Scanning group: https://www.facebook.com/groups/141629333196799
+2026-06-24 12:36:52,101 - scanner - INFO - Posting comment immediately for lead 50 at https://www.facebook.com/groups/wtnkolkata/posts/1928995774460137/?comment_id=1929481701078211&__cft__[0]=AZaouzZrS8Rib__gNWhVXD5QsDWRGWtJrCPK92bGL_Auvc8iEGb_OKOI6LJ_ZJsaWw91tG68kup0OnP64rtPQFS_6_SD1z0Fw1K0YjHb6ZkdDSRhCAan_CsimaiQZV-hfZK9PAS0y5S4qClbOdD3H1brZoVWlETO_lSZCHiCz998ue_dNL_eAbGkt2VghO99r0G14rb3MwcFFbI0Je5CQ32XSl2OVJwvXf73n8tcid0MnA&__tn__=R-R
+2026-06-24 12:36:58,795 - scanner - INFO - Targeting comment reply thread for comment_id: 1929481701078211
+2026-06-24 12:37:08,845 - scanner - INFO - Found comment container with selector: div[role="article"]:has(a[href*="1929481701078211"])
+2026-06-24 12:37:08,868 - scanner - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 12:37:27,559 - scanner - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 12:37:38,105 - scanner - INFO - Saved success screenshot: lead_50_success_20260624_123737.png
+2026-06-24 12:37:38,107 - scanner - INFO - Successfully posted comment inline for lead 50
+2026-06-24 12:37:38,272 - scanner - INFO - Saved new lead 50 from Unknown (status: APPROVED)
+2026-06-24 12:37:55,400 - scanner - INFO - Posting comment immediately for lead 51 at https://www.facebook.com/groups/wtnkolkata/posts/1929399647753083/?comment_id=1929479804411734&__cft__[0]=AZZQY6yCVzRvBCZItWl4p4sy3ZJQ6Bee85bRo3k2PQ024_vKHWJ5AZarMMWp_Fooaumv0_uoN4Fp1VpyaAQoExJmyUCnFeZjPRxmb1jdaII_Poa9q7zpFP8YQ3gYL_hyojiTBhqrYjo8vp--rjCmrWqioXL0ehv3hg20aMCg8wUib2sD06eDW88ztCmkr1zZOcw&__tn__=R-R
+2026-06-24 12:38:01,571 - scanner - INFO - Targeting comment reply thread for comment_id: 1929479804411734
+2026-06-24 12:38:11,607 - scanner - INFO - Found comment container with selector: div[role="article"]:has(a[href*="1929479804411734"])
+2026-06-24 12:38:11,637 - scanner - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 12:38:31,717 - scanner - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 12:38:44,924 - scanner - INFO - Saved success screenshot: lead_51_success_20260624_123842.png
+2026-06-24 12:38:44,925 - scanner - INFO - Successfully posted comment inline for lead 51
+2026-06-24 12:38:45,067 - scanner - INFO - Saved new lead 51 from Unknown (status: APPROVED)
+2026-06-24 12:39:03,616 - scanner - INFO - Posting comment immediately for lead 52 at https://www.facebook.com/groups/wtnkolkata/posts/1929377474421967/?comment_id=1929526021073779&__cft__[0]=AZaUn_JncZjKAjwO4aEVvSBNAVxcC-pl3YfuPqT7lRb6EnrXpzQMKB29M1HjLZ3ePntrsG0ZpuGFtVh4EBNjwoJO4a1MhlGmmrnj29zKbsbyYDtPWRtKgnRyKtohrkVrc9IDeHXJHgRMfe9PWeDnrwOlZf91sPb5w2O3G7JucxHpcIHXfvtCYoDLz3w-KaDZYMC-BZHvFOI4Oimeso0_7BGh&__tn__=R-R
+2026-06-24 12:39:18,638 - scanner - INFO - Targeting comment reply thread for comment_id: 1929526021073779
+2026-06-24 12:39:28,741 - scanner - INFO - Found comment container with selector: div[role="article"]:has(a[href*="1929526021073779"])
+2026-06-24 12:39:28,763 - scanner - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 12:39:51,504 - scanner - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 12:40:14,965 - scanner - INFO - Saved success screenshot: lead_52_success_20260624_124011.png
+2026-06-24 12:40:14,967 - scanner - INFO - Successfully posted comment inline for lead 52
+2026-06-24 12:40:15,383 - scanner - INFO - Saved new lead 52 from Unknown (status: APPROVED)
+2026-06-24 12:42:43,770 - scanner - INFO - Posting comment immediately for lead 53 at https://www.facebook.com/groups/wtnkolkata/posts/1928819024477812/?comment_id=1929452104414504&__cft__[0]=AZZImd97Q7XgGH6sVX0yXB_SRAXjk52nEd4tF8BKpYI3LmZEIdcrQAqkbWPUH8raLdeaY0IzJ0WtrDAi8-B5EW1I-SXGc1Gemhv8Qb7nmvGL_ZpyLYuFWvhoVidQ1Ao-tE8m8FoP1VMBp4nBXAW4uhEgvna7U0Wz_0QRTPyoguKKVkBBi2XqjFaDNcSQ4JlCgqgLIaDFLa3okdvGNWjS3O3I&__tn__=R-R
+2026-06-24 12:42:49,810 - scanner - INFO - Targeting comment reply thread for comment_id: 1929452104414504
+2026-06-24 12:42:59,851 - scanner - INFO - Found comment container with selector: div[role="article"]:has(a[href*="1929452104414504"])
+2026-06-24 12:42:59,871 - scanner - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 12:43:20,931 - scanner - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 12:43:41,567 - scanner - INFO - Saved success screenshot: lead_53_success_20260624_124340.png
+2026-06-24 12:43:41,568 - scanner - INFO - Successfully posted comment inline for lead 53
+2026-06-24 12:43:41,847 - scanner - INFO - Saved new lead 53 from Unknown (status: APPROVED)
+2026-06-24 12:45:39,502 - scanner - INFO - Posting comment immediately for lead 54 at https://www.facebook.com/groups/wtnkolkata/posts/1929266491099732/?comment_id=1929444487748599&__cft__[0]=AZZ2lnG4wihc17iueGnjmg7eCT0njj185xn25sj_22Evd5MTLc0G1973kr9mhvaZWodz7ZAgdKLZT9IZG8vM2Crs-6HiDuNeo5534-QCZT62en3xIr3ZROkFbjQU8wB505KmIyda3HOngwrK5zI0X6OAlXgshQCEU5WtfvUskyNeHxR0avzWYKUJvguRjrwBFjsHutxzuRjL1UHzjtTWOLzeThpBki4k_2C1GzLIHrIQmg&__tn__=R-R
+2026-06-24 12:45:45,954 - scanner - INFO - Targeting comment reply thread for comment_id: 1929444487748599
+2026-06-24 12:45:55,988 - scanner - INFO - Found comment container with selector: div[role="article"]:has(a[href*="1929444487748599"])
+2026-06-24 12:45:56,068 - scanner - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 12:46:17,999 - scanner - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 12:46:33,868 - scanner - INFO - Saved success screenshot: lead_54_success_20260624_124631.png
+2026-06-24 12:46:33,869 - scanner - INFO - Successfully posted comment inline for lead 54
+2026-06-24 12:46:33,970 - scanner - INFO - Saved new lead 54 from Unknown (status: APPROVED)
+2026-06-24 12:46:54,586 - scanner - INFO - Posting comment immediately for lead 55 at https://www.facebook.com/groups/wtnkolkata/posts/1928684727824575/?comment_id=1929547177738330&__cft__[0]=AZYDBRj4_mI41z8BwAaWN_ZE-fzJgmByBY0MHPbnK19NV_qmZaPLSADY5R0P5nmMLF3sNcHRTvMdi7DowOiRiQCpQni6xfkyoXVIpvCMos9IE1PQM5tE7VRsPh9kxOYPuAZfqtWV053n3hdFo0tFJPWpAk6lLBKXcZZnZW8PShhwCXZdtRR-qSj_Y6om12Q_IlyeWFSik7tZIfGnT5Q2lG86Rx1V1VG0ZZxsviw5A535vA&__tn__=R-R
+2026-06-24 12:47:01,095 - scanner - INFO - Targeting comment reply thread for comment_id: 1929547177738330
+2026-06-24 12:47:11,135 - scanner - INFO - Found comment container with selector: div[role="article"]:has(a[href*="1929547177738330"])
+2026-06-24 12:47:11,161 - scanner - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 12:47:33,274 - scanner - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 12:47:42,664 - scanner - INFO - Post button not found, attempting to post by pressing Enter
+2026-06-24 12:47:42,666 - scanner - ERROR - Error posting comment inline for lead 55: Keyboard.press: Target page, context or browser has been closed
+2026-06-24 12:47:42,703 - scanner - INFO - Saved new lead 55 from Unknown (status: APPROVED)
+2026-06-24 12:47:42,782 - scanner - INFO - Group 'Weekend tours Near kolkata': 43 posts, 6 leads found
+2026-06-24 12:47:42,783 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1CbxH7SH6m/
+2026-06-24 12:47:42,799 - scanner - ERROR - Error scanning group https://www.facebook.com/share/g/1CbxH7SH6m/: Page.goto: Target page, context or browser has been closed
+2026-06-24 12:47:42,800 - scanner - INFO - Scanning group: https://www.facebook.com/
+2026-06-24 12:47:42,803 - scanner - ERROR - Error scanning group https://www.facebook.com/: Page.goto: Target page, context or browser has been closed
+2026-06-24 12:47:42,803 - scanner - INFO - Scanning group: https://www.facebook.com/groups/darjeelingandsikkimtour
+2026-06-24 12:47:42,805 - scanner - ERROR - Error scanning group https://www.facebook.com/groups/darjeelingandsikkimtour: Page.goto: Target page, context or browser has been closed
+2026-06-24 12:47:42,805 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1D8XzzmEuv/
+2026-06-24 12:47:42,807 - scanner - ERROR - Error scanning group https://www.facebook.com/share/g/1D8XzzmEuv/: Page.goto: Target page, context or browser has been closed
+2026-06-24 12:47:43,366 - scanner - INFO - Scan complete, sleeping for 20 minutes
+2026-06-24 12:52:31,209 - scanner - INFO - Facebook Scanner initialized
+2026-06-24 12:52:31,448 - scanner - INFO - Scanner started
+2026-06-24 12:52:31,633 - scanner - INFO - Starting group scan of 5 groups
+2026-06-24 12:52:31,649 - scanner - INFO - Using scanner-owned browser for group scan (headless=False, profile=./.facebook_session)
+2026-06-24 12:52:35,334 - scanner - INFO - Opening scanner-owned Facebook browser (headless=False, profile=./.facebook_session)
+2026-06-24 12:52:36,965 - scanner - INFO - Scanner browser page ready for group scan
+2026-06-24 12:52:39,964 - scanner - INFO - Waiting up to 120s for Facebook login before scanning...
+2026-06-24 12:52:40,055 - scanner - INFO - Facebook login/session detected. Starting scan.
+2026-06-24 12:52:40,055 - scanner - INFO - Scanning group: https://www.facebook.com/groups/141629333196799
+2026-06-24 12:57:05,069 - scanner - INFO - Posting comment immediately for lead 56 at https://www.facebook.com/groups/wtnkolkata/posts/1928577181168663/?comment_id=1928726634487051&__cft__[0]=AZbtTyEXFtDdfidR0f5kwIbaXKVuqfuYNmpifl9uSaJaiLLf2bErQERLmovFqkReflQpOlLH-VWVT2iCd1seOlV9fNEwjbKtjJK7c8vQoGg8ikAo4ZayA3UirBhpJi_nVV-I2s_2LoE6MP2P1D5M-rARUFXrfDDhz_71SB5mrm8ENcr9abrjrOzdvDA1Lk_3O1xD2PCyoFAonKr9FR-lRBX2Xry0fg1kq3L1pOZR3_dkZA&__tn__=R-R
+2026-06-24 12:57:10,814 - scanner - INFO - Targeting comment reply thread for comment_id: 1928726634487051
+2026-06-24 12:57:20,872 - scanner - INFO - Found comment container with selector: div[role="article"]:has(a[href*="1928726634487051"])
+2026-06-24 12:57:20,937 - scanner - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 12:57:40,698 - scanner - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 12:57:47,785 - scanner - INFO - Attempting to post by pressing Enter
+2026-06-24 12:57:53,316 - scanner - INFO - Saved success screenshot: lead_56_success_20260624_125749.png
+2026-06-24 12:57:53,317 - scanner - INFO - Successfully posted comment inline for lead 56
+2026-06-24 12:57:53,451 - scanner - INFO - Saved new lead 56 from Unknown (status: APPROVED)
+2026-06-24 12:57:53,543 - scanner - INFO - Group 'Weekend tours Near kolkata': 43 posts, 1 leads found
+2026-06-24 12:57:53,547 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1D8XzzmEuv/
+2026-06-24 12:58:35,773 - scanner - INFO - Group 'SIKKIM TOURISM': 0 posts, 0 leads found
+2026-06-24 12:58:35,773 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1CbxH7SH6m/
+2026-06-24 13:00:13,363 - scanner - INFO - Posting comment immediately for lead 57 at https://www.facebook.com/groups/2021962444786761/posts/4427665307549784/?comment_id=4427802604202721&__cft__[0]=AZZCmOxLFzAIc7o9iL73ms_E3BFay-lRn0NKqQOYkaT93RGq8jGvVUalhH8SQSFWDrCQfMyRlXkHr2rTNPCm62-B7e8yREtQrH7M0YmXsqC1wPn7bH5WNQvxBfykpaOUJg5-Ljac2WgpkEQS40F4ym60D3fO2pX6fOeS8c3G9vdbQaK507eLMRu4oWcpqzDyJOxQD6qi344dESgOipg3yyxq&__tn__=R-R
+2026-06-24 13:00:21,275 - scanner - INFO - Targeting comment reply thread for comment_id: 4427802604202721
+2026-06-24 13:00:31,311 - scanner - INFO - Found comment container with selector: div[role="article"]:has(a[href*="4427802604202721"])
+2026-06-24 13:00:31,373 - scanner - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 13:00:51,370 - scanner - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 13:00:58,405 - scanner - INFO - Attempting to post by pressing Enter
+2026-06-24 13:01:03,190 - scanner - INFO - Saved success screenshot: lead_57_success_20260624_130100.png
+2026-06-24 13:01:03,192 - scanner - INFO - Successfully posted comment inline for lead 57
+2026-06-24 13:01:03,332 - scanner - INFO - Saved new lead 57 from Unknown (status: APPROVED)
+2026-06-24 13:01:56,341 - scanner - INFO - Group 'North Bengal & Sikkim Tour and Guide (NBSTG) Siliguri Njp Based': 23 posts, 1 leads found
+2026-06-24 13:01:56,341 - scanner - INFO - Scanning group: https://www.facebook.com/
+2026-06-24 13:02:33,608 - scanner - INFO - Group 'Facebook Menu': 0 posts, 0 leads found
+2026-06-24 13:02:33,609 - scanner - INFO - Scanning group: https://www.facebook.com/groups/darjeelingandsikkimtour
+2026-06-24 13:03:04,710 - scanner - INFO - Posting comment immediately for lead 58 at https://www.facebook.com/groups/darjeelingandsikkimtour/posts/27653351170957402/?comment_id=27653709534254899&__cft__[0]=AZZ7pQCOYpA1tHbreWHquFOHurEZErSst65T5PFUQs3A5hW7O-W5czFLCMnsh0IWrExU3YTT-w04fbJ2hglkt7ZkbPFw3zyvpehjJtuvvX-u2_SM6AfEAL26hukjER-q5LcxqO2m-a0DcEI8-W3y3-JhHtx1qbMjprMRMnI4U4mXH6n8vQ4qNSOJ_JUHAILGJyJ9qn5jO3CLoB4_BRlR28y2&__tn__=R-R
+2026-06-24 13:03:14,660 - scanner - INFO - Targeting comment reply thread for comment_id: 27653709534254899
+2026-06-24 13:03:24,835 - scanner - INFO - Found comment container with selector: div[role="article"]:has(a[href*="27653709534254899"])
+2026-06-24 13:03:24,867 - scanner - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 13:03:45,899 - scanner - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 13:03:54,606 - scanner - INFO - Attempting to post by pressing Enter
+2026-06-24 13:04:00,503 - scanner - INFO - Saved success screenshot: lead_58_success_20260624_130356.png
+2026-06-24 13:04:00,504 - scanner - INFO - Successfully posted comment inline for lead 58
+2026-06-24 13:04:00,642 - scanner - INFO - Saved new lead 58 from Unknown (status: APPROVED)
+2026-06-24 13:04:33,569 - scanner - INFO - Group 'Darjeeling & Sikkim Tourism': 20 posts, 1 leads found
+2026-06-24 13:04:34,962 - scanner - INFO - Scan complete, sleeping for 20 minutes
+2026-06-24 13:24:34,965 - scanner - INFO - Starting group scan of 5 groups
+2026-06-24 13:24:34,966 - scanner - INFO - Using scanner-owned browser for group scan (headless=False, profile=./.facebook_session)
+2026-06-24 13:24:35,458 - scanner - INFO - Opening scanner-owned Facebook browser (headless=False, profile=./.facebook_session)
+2026-06-24 13:24:36,687 - scanner - INFO - Scanner browser page ready for group scan
+2026-06-24 13:24:40,267 - scanner - INFO - Waiting up to 120s for Facebook login before scanning...
+2026-06-24 13:24:40,349 - scanner - INFO - Facebook login/session detected. Starting scan.
+2026-06-24 13:24:40,349 - scanner - INFO - Scanning group: https://www.facebook.com/groups/141629333196799
+2026-06-24 13:29:48,533 - scanner - INFO - Group 'Weekend tours Near kolkata': 45 posts, 0 leads found
+2026-06-24 13:29:48,535 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1D8XzzmEuv/
+2026-06-24 13:30:23,806 - scanner - INFO - Group 'SIKKIM TOURISM': 0 posts, 0 leads found
+2026-06-24 13:30:23,806 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1CbxH7SH6m/

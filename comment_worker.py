@@ -197,6 +197,17 @@ class CommentWorker:
                         continue
                 
                 if comment_container:
+                    # Check if we already replied inside this specific comment thread
+                    try:
+                        container_text = comment_container.inner_text()
+                        if "sikkimtourandcabs.in" in container_text:
+                            comment_worker_logger.info(f"Duplicate check: Website link already found in comment thread for lead {lead.id}, skipping.")
+                            LeadDatabase.update_lead(lead.id, status="POSTED", contacted=True)
+                            AuditLogDatabase.log_action(lead.id, "POSTED", "Skipped duplicate posting (website link already found in comment thread).")
+                            return True
+                    except Exception as e:
+                        comment_worker_logger.debug(f"Comment container text check failed: {e}")
+                        
                     # Find and click the "Reply" button/link within the comment container
                     reply_button_selectors = [
                         'div[role="button"]:has-text("Reply")',
@@ -231,7 +242,7 @@ class CommentWorker:
                     
                     for box_selector in reply_box_selectors:
                         try:
-                            comment_box = comment_container.query_selector(box_selector)
+                            comment_box = comment_container.wait_for_selector(box_selector, timeout=3000)
                             if comment_box:
                                 comment_worker_logger.info(f"Found reply input box within container: {box_selector}")
                                 break
@@ -250,6 +261,20 @@ class CommentWorker:
                 else:
                     comment_worker_logger.warning(f"Could not find comment container for comment_id {comment_id}, falling back to main comment box.")
             
+            # If we couldn't find the comment container (or if it's not a comment reply in the first place)
+            # check the entire page for duplication
+            if not is_comment_reply or not comment_container:
+                # General duplicate check on the entire page
+                try:
+                    page_text = page.content()
+                    if "sikkimtourandcabs.in" in page_text:
+                        comment_worker_logger.info(f"Duplicate check: Website link already found on page for lead {lead.id}, skipping.")
+                        LeadDatabase.update_lead(lead.id, status="POSTED", contacted=True)
+                        AuditLogDatabase.log_action(lead.id, "POSTED", "Skipped duplicate posting (website link already found on page).")
+                        return True
+                except Exception as e:
+                    comment_worker_logger.debug(f"Page text duplicate check failed: {e}")
+
             if not comment_box:
                 # Find and click main comment box
                 comment_box_selectors = [
@@ -286,44 +311,78 @@ class CommentWorker:
             page.keyboard.type(lead.suggested_reply, delay=10)
             time.sleep(0.5)
             
-            # Find and click post button
-            post_button_selectors = [
-                'form [role="button"][aria-label*="Comment"]',
-                'div[role="button"][aria-label*="Comment"]',
-                'button:has-text("Post")',
-                'button[aria-label*="Post"]',
-                'button[type="submit"]',
-                'div[aria-label="Comment"]',
-                'div[aria-label="Post"]',
-                'span:has-text("Post")'
-            ]
-            
-            post_button = None
-            for selector in post_button_selectors:
-                try:
-                    post_button = page.query_selector(selector)
-                    if post_button:
-                        break
-                except:
-                    continue
-            
-            if post_button:
-                try:
-                    post_button.scroll_into_view_if_needed()
-                    time.sleep(0.2)
-                    post_button.click()
-                except Exception as e:
-                    comment_worker_logger.warning(f"Failed to click post button, will try pressing Enter: {e}")
-                    page.keyboard.press("Enter")
-            else:
-                comment_worker_logger.info("Post button not found, attempting to post by pressing Enter")
-                page.keyboard.press("Enter")
-            
+            # Press Enter to post
+            comment_worker_logger.info("Attempting to post by pressing Enter")
+            page.keyboard.press("Enter")
             time.sleep(2)
             
+            is_posted = False
+            try:
+                box_text = comment_box.inner_text()
+                if lead.suggested_reply not in box_text:
+                    is_posted = True
+            except Exception:
+                is_posted = True
+                
+            if not is_posted:
+                comment_worker_logger.info("Enter key press did not submit the comment. Attempting to find and click submit button.")
+                # Find and click post button
+                post_button_selectors = [
+                    'form [role="button"][aria-label*="Comment"]',
+                    'div[role="button"][aria-label*="Comment"]',
+                    'button[aria-label*="Post"]',
+                    'button[type="submit"]',
+                    'div[aria-label="Comment"]',
+                    'div[aria-label="Post"]'
+                ]
+                
+                post_button = None
+                if is_comment_reply and comment_container:
+                    for selector in post_button_selectors:
+                        try:
+                            post_button = comment_container.query_selector(selector)
+                            if post_button:
+                                comment_worker_logger.info(f"Found post button inside comment container: {selector}")
+                                break
+                        except:
+                            continue
+                
+                if not post_button:
+                    for selector in post_button_selectors:
+                        try:
+                            post_button = page.query_selector(selector)
+                            if post_button:
+                                break
+                        except:
+                            continue
+                
+                if post_button:
+                    try:
+                        post_button.scroll_into_view_if_needed()
+                        time.sleep(0.2)
+                        post_button.click()
+                        time.sleep(2)
+                    except Exception as e:
+                        comment_worker_logger.warning(f"Failed to click post button: {e}")
+                else:
+                    comment_worker_logger.warning("No submit button found to click.")
+            
+            # Final validation check
+            final_posted = False
+            try:
+                box_text = comment_box.inner_text()
+                if lead.suggested_reply not in box_text:
+                    final_posted = True
+            except Exception:
+                final_posted = True
+                
+            if not final_posted:
+                comment_worker_logger.error(f"Comment was not successfully posted for lead {lead.id} (text box still contains text)")
+                return False
+                
             # Verify post was successful (simple check: page loaded without error)
             try:
-                page.wait_for_selector('div[role="status"]', timeout=3000)  # Posted notification
+                page.wait_for_selector('div[role="status"]', timeout=3000)
             except:
                 pass
             
