@@ -1,69 +1,57 @@
-2026-06-22 10:50:42,507 - scanner - ERROR - Error scanning group https://www.facebook.com/: Page.query_selector_all: Execution context was destroyed, most likely because of a navigation
-2026-06-22 10:50:42,996 - scanner - INFO - Scan complete, sleeping for 300 seconds
-2026-06-22 10:52:21,330 - scanner - INFO - Scanner stopped
-2026-06-22 10:52:42,674 - scanner - INFO - Facebook Scanner initialized
-2026-06-22 10:52:43,086 - scanner - INFO - Scanner started
-2026-06-22 10:52:43,116 - scanner - INFO - Group scan mode disabled. Scanning Facebook home/current feed
-2026-06-22 10:52:43,147 - scanner - INFO - Using scanner-owned browser for home scan (headless=False, profile=./.facebook_session)
-2026-06-22 10:53:00,644 - scanner - INFO - Opening scanner-owned Facebook browser (headless=False, profile=./.facebook_session)
-2026-06-22 10:53:11,026 - scanner - INFO - Scanner browser page ready for home scan
-2026-06-22 10:53:14,456 - scanner - INFO - Waiting up to 120s for Facebook login before scanning...
-2026-06-22 10:53:14,456 - scanner - INFO - Facebook login/session detected. Starting scan.
-2026-06-22 10:53:14,457 - scanner - INFO - Scanning group: https://www.facebook.com/
-2026-06-22 10:59:21,954 - scanner - INFO - Group 'Facebook Menu': 0 posts, 0 leads found
-2026-06-22 10:59:21,955 - scanner - INFO - Scan complete, sleeping for 300 seconds
-2026-06-22 11:04:21,957 - scanner - INFO - Group scan mode disabled. Scanning Facebook home/current feed
-2026-06-22 11:04:21,958 - scanner - INFO - Using scanner-owned browser for home scan (headless=False, profile=./.facebook_session)
-2026-06-22 11:04:21,958 - scanner - INFO - Scanner browser page ready for home scan
-2026-06-22 11:04:21,959 - scanner - INFO - Facebook login/session already active on existing page.
-2026-06-22 11:04:21,959 - scanner - INFO - Scanning group: https://www.facebook.com/
-2026-06-22 11:10:08,550 - scanner - INFO - Group 'Facebook Menu': 0 posts, 0 leads found
-2026-06-22 11:10:08,556 - scanner - INFO - Scan complete, sleeping for 300 seconds
-2026-06-22 11:15:08,559 - scanner - INFO - Group scan mode disabled. Scanning Facebook home/current feed
-2026-06-22 11:15:08,561 - scanner - INFO - Using scanner-owned browser for home scan (headless=False, profile=./.facebook_session)
-2026-06-22 11:15:08,561 - scanner - INFO - Scanner browser page ready for home scan
-2026-06-22 11:15:08,561 - scanner - INFO - Facebook login/session already active on existing page.
-2026-06-22 11:15:08,562 - scanner - INFO - Scanning group: https://www.facebook.com/
-2026-06-22 11:16:52,192 - scanner - INFO - Facebook Scanner initialized
-2026-06-22 11:21:23,456 - scanner - INFO - Facebook Scanner initialized
-2026-06-22 11:28:03,081 - scanner - INFO - Facebook Scanner initialized
-2026-06-22 11:31:16,934 - scanner - INFO - Scanner stopped
-2026-06-22 11:31:53,928 - scanner - INFO - Group 'Facebook Menu': 82 posts, 12 leads found
-2026-06-22 11:31:53,937 - scanner - INFO - Scan complete, sleeping for 300 seconds
-2026-06-22 11:45:35,765 - scanner - INFO - Facebook Scanner initialized
-2026-06-22 11:45:37,406 - scanner - INFO - Scanner started
-2026-06-22 11:45:37,446 - scanner - INFO - Group scan mode disabled. Scanning Facebook home/current feed
-2026-06-22 11:45:37,895 - scanner - INFO - Using scanner-owned browser for home scan (headless=False, profile=./.facebook_session)
-2026-06-22 11:46:10,586 - scanner - INFO - Opening scanner-owned Facebook browser (headless=False, profile=./.facebook_session)
-2026-06-22 11:46:21,862 - scanner - INFO - Scanner browser page ready for home scan
-2026-06-22 11:46:27,593 - scanner - INFO - Waiting up to 120s for Facebook login before scanning...
-2026-06-22 11:46:27,872 - scanner - INFO - Facebook login/session detected. Starting scan.
-2026-06-22 11:46:28,023 - scanner - INFO - Scanning group: https://www.facebook.com/
-2026-06-22 11:53:05,793 - scanner - INFO - Group 'Facebook Menu': 0 posts, 0 leads found
-2026-06-22 11:53:05,803 - scanner - INFO - Scan complete, sleeping for 300 seconds
-2026-06-22 11:58:05,808 - scanner - INFO - Group scan mode disabled. Scanning Facebook home/current feed
-2026-06-22 11:58:05,810 - scanner - INFO - Using scanner-owned browser for home scan (headless=False, profile=./.facebook_session)
-2026-06-22 11:58:05,810 - scanner - INFO - Scanner browser page ready for home scan
-2026-06-22 11:58:05,810 - scanner - INFO - Facebook login/session already active on existing page.
-2026-06-22 11:58:05,811 - scanner - INFO - Scanning group: https://www.facebook.com/
-2026-06-22 12:04:01,351 - scanner - INFO - Group 'Facebook Menu': 0 posts, 0 leads found
-2026-06-22 12:04:01,352 - scanner - INFO - Scan complete, sleeping for 300 seconds
-2026-06-22 12:09:02,094 - scanner - INFO - Group scan mode disabled. Scanning Facebook home/current feed
-2026-06-22 12:09:02,167 - scanner - INFO - Using scanner-owned browser for home scan (headless=False, profile=./.facebook_session)
-2026-06-22 12:09:02,354 - scanner - INFO - Scanner browser page ready for home scan
-2026-06-22 12:09:02,584 - scanner - INFO - Facebook login/session already active on existing page.
-2026-06-22 12:09:02,616 - scanner - INFO - Scanning group: https://www.facebook.com/
-2026-06-22 12:16:07,048 - scanner - INFO - Facebook Scanner initialized
-2026-06-22 12:18:33,301 - scanner - INFO - Group 'Facebook Menu': 10 posts, 0 leads found
-2026-06-22 12:18:33,391 - scanner - INFO - Scan complete, sleeping for 300 seconds
-2026-06-22 12:19:09,411 - scanner - INFO - Scanner stopped
-2026-06-22 12:19:47,238 - scanner - INFO - Facebook Scanner initialized
-2026-06-22 12:57:02,545 - scanner - INFO - Facebook Scanner initialized
-2026-06-22 13:04:53,621 - scanner - INFO - Facebook Scanner initialized
-2026-06-22 13:12:58,410 - scanner - INFO - Facebook Scanner initialized
-2026-06-22 13:16:49,404 - scanner - INFO - Facebook Scanner initialized
-2026-06-22 13:22:40,215 - scanner - INFO - Facebook Scanner initialized
-2026-06-22 13:23:15,424 - scanner - INFO - Facebook Scanner initialized
-2026-06-22 13:45:30,842 - scanner - INFO - Facebook Scanner initialized
-2026-06-22 13:48:14,334 - scanner - INFO - Facebook Scanner initialized
-2026-06-22 13:54:50,829 - scanner - INFO - Facebook Scanner initialized
+2026-06-24 10:10:24,770 - scanner - INFO - Starting group scan of 3 groups
+2026-06-24 10:10:24,772 - scanner - INFO - Using scanner-owned browser for group scan (headless=False, profile=./.facebook_session)
+2026-06-24 10:10:25,329 - scanner - INFO - Opening scanner-owned Facebook browser (headless=False, profile=./.facebook_session)
+2026-06-24 10:10:26,947 - scanner - INFO - Scanner browser page ready for group scan
+2026-06-24 10:10:32,489 - scanner - INFO - Waiting up to 120s for Facebook login before scanning...
+2026-06-24 10:10:32,535 - scanner - INFO - Facebook login/session detected. Starting scan.
+2026-06-24 10:10:32,536 - scanner - INFO - Scanning group: https://www.facebook.com/
+2026-06-24 10:13:29,803 - scanner - INFO - Facebook Scanner initialized
+2026-06-24 10:13:29,822 - scanner - INFO - Scanner started
+2026-06-24 10:13:29,822 - scanner - INFO - Scanner is running. Press Ctrl+C to stop.
+2026-06-24 10:13:29,830 - scanner - INFO - Starting group scan of 3 groups
+2026-06-24 10:13:29,831 - scanner - INFO - Using scanner-owned browser for group scan (headless=False, profile=./.facebook_session)
+2026-06-24 10:13:30,488 - scanner - INFO - Opening scanner-owned Facebook browser (headless=False, profile=./.facebook_session)
+2026-06-24 10:13:31,155 - scanner - ERROR - Facebook profile is already open in another browser. Close the visible Facebook login/scanner browser window, then start the scanner again.
+2026-06-24 10:13:31,184 - scanner - INFO - Scan complete, sleeping for 300 seconds
+2026-06-24 10:15:53,662 - scanner - INFO - Group 'Facebook Menu': 0 posts, 0 leads found
+2026-06-24 10:15:53,663 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1CbxH7SH6m/
+2026-06-24 10:16:29,591 - scanner - INFO - Facebook Scanner initialized
+2026-06-24 10:19:30,558 - scanner - INFO - Facebook Scanner initialized
+2026-06-24 10:22:29,344 - scanner - INFO - Group 'North Bengal & Sikkim Tour and Guide (NBSTG) Siliguri Njp Based': 51 posts, 6 leads found
+2026-06-24 10:22:29,357 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1D8XzzmEuv/
+2026-06-24 10:22:29,363 - scanner - ERROR - Error scanning group https://www.facebook.com/share/g/1D8XzzmEuv/: Page.goto: Target page, context or browser has been closed
+2026-06-24 10:22:29,365 - scanner - INFO - Scan complete, sleeping for 300 seconds
+2026-06-24 10:22:37,359 - scanner - INFO - Facebook Scanner initialized
+2026-06-24 10:24:55,928 - scanner - INFO - Facebook Scanner initialized
+2026-06-24 10:25:12,137 - scanner - INFO - Scanner started
+2026-06-24 10:25:12,353 - scanner - INFO - Starting group scan of 3 groups
+2026-06-24 10:25:12,607 - scanner - INFO - Using scanner-owned browser for group scan (headless=False, profile=./.facebook_session)
+2026-06-24 10:25:14,925 - scanner - INFO - Opening scanner-owned Facebook browser (headless=False, profile=./.facebook_session)
+2026-06-24 10:25:16,514 - scanner - INFO - Scanner browser page ready for group scan
+2026-06-24 10:25:19,630 - scanner - INFO - Waiting up to 120s for Facebook login before scanning...
+2026-06-24 10:25:19,638 - scanner - INFO - Facebook login/session detected. Starting scan.
+2026-06-24 10:25:19,639 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1D8XzzmEuv/
+2026-06-24 10:28:29,890 - scanner - INFO - Facebook Scanner initialized
+2026-06-24 10:29:43,454 - scanner - INFO - Facebook Scanner initialized
+2026-06-24 10:32:40,836 - scanner - INFO - Facebook Scanner initialized
+2026-06-24 11:14:23,864 - scanner - INFO - Facebook Scanner initialized
+2026-06-24 11:14:23,866 - scanner - INFO - Scanner started
+2026-06-24 11:14:23,872 - scanner - INFO - Starting group scan of 3 groups
+2026-06-24 11:14:24,093 - scanner - INFO - Using scanner-owned browser for group scan (headless=False, profile=./.facebook_session)
+2026-06-24 11:14:26,704 - scanner - INFO - Opening scanner-owned Facebook browser (headless=False, profile=./.facebook_session)
+2026-06-24 11:14:28,332 - scanner - INFO - Scanner browser page ready for group scan
+2026-06-24 11:14:32,616 - scanner - INFO - Waiting up to 120s for Facebook login before scanning...
+2026-06-24 11:14:32,661 - scanner - INFO - Facebook login/session detected. Starting scan.
+2026-06-24 11:14:32,661 - scanner - INFO - Scanning group: https://www.facebook.com/share/g/1CbxH7SH6m/
+2026-06-24 11:18:21,271 - scanner - INFO - Saved new lead 40 from Unknown (status: APPROVED)
+2026-06-24 11:18:35,596 - scanner - INFO - Saved new lead 41 from Unknown (status: APPROVED)
+2026-06-24 11:18:53,412 - scanner - INFO - Saved new lead 42 from Unknown (status: APPROVED)
+2026-06-24 11:19:38,957 - scanner - INFO - Saved new lead 43 from Unknown (status: APPROVED)
+2026-06-24 11:19:53,845 - scanner - INFO - Saved new lead 44 from Unknown (status: APPROVED)
+2026-06-24 11:20:45,118 - scanner - INFO - Saved new lead 45 from Unknown (status: APPROVED)
+2026-06-24 11:22:11,558 - scanner - INFO - Saved new lead 46 from Unknown (status: APPROVED)
+2026-06-24 11:22:26,692 - scanner - INFO - Saved new lead 47 from Unknown (status: APPROVED)
+2026-06-24 11:23:57,574 - scanner - INFO - Saved new lead 48 from Unknown (status: APPROVED)
+2026-06-24 11:24:00,604 - scanner - INFO - Group 'Notifications': 114 posts, 9 leads found
+2026-06-24 11:24:01,427 - scanner - INFO - Scan complete, sleeping for 300 seconds
+2026-06-24 11:24:01,428 - scanner - INFO - Scanner stopped

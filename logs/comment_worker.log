@@ -1,0 +1,85 @@
+2026-06-24 10:13:15,906 - comment_worker - INFO - Comment Worker initialized
+2026-06-24 10:13:15,923 - comment_worker - INFO - Comment Worker started
+2026-06-24 10:13:15,928 - comment_worker - INFO - Comment Worker is running. Press Ctrl+C to stop.
+2026-06-24 11:21:38,434 - comment_worker - INFO - Comment Worker initialized
+2026-06-24 11:21:38,462 - comment_worker - INFO - Comment Worker started
+2026-06-24 11:21:38,470 - comment_worker - INFO - Comment Worker is running. Press Ctrl+C to stop.
+2026-06-24 11:21:38,475 - comment_worker - INFO - Found 15 approved leads to post
+2026-06-24 11:21:39,990 - comment_worker - WARNING - Could not start browser context - profile directory may be locked by another process (e.g., scanner). Will retry in the next cycle.
+2026-06-24 11:21:49,993 - comment_worker - INFO - Found 15 approved leads to post
+2026-06-24 11:21:51,426 - comment_worker - WARNING - Could not start browser context - profile directory may be locked by another process (e.g., scanner). Will retry in the next cycle.
+2026-06-24 11:22:01,428 - comment_worker - INFO - Found 15 approved leads to post
+2026-06-24 11:22:02,969 - comment_worker - WARNING - Could not start browser context - profile directory may be locked by another process (e.g., scanner). Will retry in the next cycle.
+2026-06-24 11:22:12,997 - comment_worker - INFO - Found 16 approved leads to post
+2026-06-24 11:22:14,632 - comment_worker - WARNING - Could not start browser context - profile directory may be locked by another process (e.g., scanner). Will retry in the next cycle.
+2026-06-24 11:22:24,634 - comment_worker - INFO - Found 16 approved leads to post
+2026-06-24 11:22:25,753 - comment_worker - WARNING - Could not start browser context - profile directory may be locked by another process (e.g., scanner). Will retry in the next cycle.
+2026-06-24 11:22:35,755 - comment_worker - INFO - Found 17 approved leads to post
+2026-06-24 11:22:36,819 - comment_worker - WARNING - Could not start browser context - profile directory may be locked by another process (e.g., scanner). Will retry in the next cycle.
+2026-06-24 11:22:46,822 - comment_worker - INFO - Found 17 approved leads to post
+2026-06-24 11:22:47,919 - comment_worker - WARNING - Could not start browser context - profile directory may be locked by another process (e.g., scanner). Will retry in the next cycle.
+2026-06-24 11:22:57,922 - comment_worker - INFO - Found 17 approved leads to post
+2026-06-24 11:22:58,846 - comment_worker - WARNING - Could not start browser context - profile directory may be locked by another process (e.g., scanner). Will retry in the next cycle.
+2026-06-24 11:23:08,848 - comment_worker - INFO - Found 17 approved leads to post
+2026-06-24 11:23:09,847 - comment_worker - WARNING - Could not start browser context - profile directory may be locked by another process (e.g., scanner). Will retry in the next cycle.
+2026-06-24 11:23:19,849 - comment_worker - INFO - Found 17 approved leads to post
+2026-06-24 11:23:21,097 - comment_worker - WARNING - Could not start browser context - profile directory may be locked by another process (e.g., scanner). Will retry in the next cycle.
+2026-06-24 11:23:31,099 - comment_worker - INFO - Found 17 approved leads to post
+2026-06-24 11:23:31,945 - comment_worker - WARNING - Could not start browser context - profile directory may be locked by another process (e.g., scanner). Will retry in the next cycle.
+2026-06-24 11:23:41,948 - comment_worker - INFO - Found 17 approved leads to post
+2026-06-24 11:23:42,979 - comment_worker - WARNING - Could not start browser context - profile directory may be locked by another process (e.g., scanner). Will retry in the next cycle.
+2026-06-24 11:23:52,982 - comment_worker - INFO - Found 17 approved leads to post
+2026-06-24 11:23:54,453 - comment_worker - WARNING - Could not start browser context - profile directory may be locked by another process (e.g., scanner). Will retry in the next cycle.
+2026-06-24 11:24:04,455 - comment_worker - INFO - Found 18 approved leads to post
+2026-06-24 11:24:06,361 - comment_worker - INFO - Posting comment for lead 39: https://www.facebook.com/groups/2021962444786761/posts/4427032094279772/?comment_id=4427601337556181&__cft__[0]=AZanmxCQmq-q9NhI8V5Qz1m-p06rofCciHEPAhZ66BS_5lSAlLKfptNqlpKgDtNtUafhPspy3ratrMlGHSGBpF2U917GEnd-YZWMXdPR61TLZvWUyVEWP5nJXgJFNbyD-X_cUlIs8rdVj_V1LKSwyiEybm5XxNjT03h0RgHn1aZf_6LmDKcIZtzYOHfY285G7yi5EOataxMgZGRekMMXLcBKzNj-ZSBkRqqJYbyFfZW3DA&__tn__=R-R
+2026-06-24 11:24:11,939 - comment_worker - INFO - Targeting comment reply thread for comment_id: 4427601337556181
+2026-06-24 11:24:22,008 - comment_worker - INFO - Found comment container with selector: div[role="article"]:has(a[href*="4427601337556181"])
+2026-06-24 11:24:22,027 - comment_worker - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 11:24:25,673 - comment_worker - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 11:24:37,994 - comment_worker - INFO - Successfully posted comment for lead 39
+2026-06-24 11:24:37,994 - comment_worker - INFO - Posting comment for lead 44: https://www.facebook.com/groups/2021962444786761/posts/4425054481144200/?comment_id=4425081164474865&__cft__[0]=AZY4HD3kZ6kqihYVpVZ0kujclvoiwPzFUK5_3cnstUqwHJQEgGBDfQcdu7WPPawDfzx1Fn6L-MBTPMfzskF7pmt40MnVKu0Eeb-qIK_ojC7Z5GX70yMmcjyTWbdWrb7BBgk6cFKX41Dl3DC1kZ8aGxsZOmpnlASq4LwHGGhs5mNhYqtaBDwqcTuv53GhOB43nrpVYHYFF3vsxqq7i3Nlkh4u&__tn__=R-R
+2026-06-24 11:24:43,202 - comment_worker - INFO - Targeting comment reply thread for comment_id: 4425081164474865
+2026-06-24 11:24:53,229 - comment_worker - INFO - Found comment container with selector: div[role="article"]:has(a[href*="4425081164474865"])
+2026-06-24 11:24:53,240 - comment_worker - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 11:24:56,916 - comment_worker - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 11:25:09,663 - comment_worker - INFO - Successfully posted comment for lead 44
+2026-06-24 11:25:09,663 - comment_worker - INFO - Posting comment for lead 40: https://www.facebook.com/groups/2021962444786761/posts/4420446874938294/?comment_id=4420748938241421&__cft__[0]=AZZbT0KPT088-GXotjv--ek3pyIosMUK7RxiBRPWZt1OX3GG2PU-yXVaBCBs9HWTgw66NEzKLyHKqtsSjSfMAuxnb854lbmxw_UeZSX2DQTGtnkE2j4G89KYSFQaeaS8vIeaJB2KYhJHsn5DXODmmn9-n0RDi0USDjiz6xHpX4mxrokm9mXEqg5SMcd_bJoupss&__tn__=R-R
+2026-06-24 11:25:14,795 - comment_worker - INFO - Targeting comment reply thread for comment_id: 4420748938241421
+2026-06-24 11:25:24,847 - comment_worker - INFO - Found comment container with selector: div[role="article"]:has(a[href*="4420748938241421"])
+2026-06-24 11:25:24,866 - comment_worker - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 11:25:28,566 - comment_worker - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 11:25:42,657 - comment_worker - INFO - Successfully posted comment for lead 40
+2026-06-24 11:25:42,658 - comment_worker - INFO - Posting comment for lead 35: https://www.facebook.com/groups/2021962444786761/posts/4426319057684409/?comment_id=4426480764334905&__cft__[0]=AZYaKtssvbe8UQ9T6fJ6HRmiA6aeajDRCKiiMJjU83FjxRs70VTQfjXCkkQv4ae-cEH8ck9Sm4cm5b68zbzJq3EjDFbgh8eLYV3bFa15DTCW8FK1D1drsGI8ttI_tPm4qXrEPL8EdaO64B-9IgnZsqszXBg55RWrofy9Jn0d2e6GPEVUFp-NCnPU8Q3AynKuxAg&__tn__=R-R
+2026-06-24 11:25:47,828 - comment_worker - INFO - Targeting comment reply thread for comment_id: 4426480764334905
+2026-06-24 11:25:57,848 - comment_worker - INFO - Found comment container with selector: div[role="article"]:has(a[href*="4426480764334905"])
+2026-06-24 11:25:57,860 - comment_worker - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 11:26:01,510 - comment_worker - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 11:26:16,998 - comment_worker - INFO - Successfully posted comment for lead 35
+2026-06-24 11:26:16,998 - comment_worker - INFO - Posting comment for lead 33: https://www.facebook.com/groups/2021962444786761/posts/4426679410981707/?comment_id=4427610134221968&__cft__[0]=AZZHU8jN8tn0ekpkpeEqLQvUyKez1ZsWF93p_vWnBYY8X2kTCjh5VSKyf8uJdloqYndAYEAdbUPs2d3ClvjqOJf4zz-sCDBhsBcLCxR7o_HSAPMSyyk64uHT9qJJqAuz_zv38VaCVL1vWKHXtC4l8c8Q7L7bUYZxlAI5nkk2-8PDErv7b5CgB8neZLnEfS9MCH9hQlxAL_ZU2X2DUSY3aznv&__tn__=R-R
+2026-06-24 11:26:28,293 - comment_worker - INFO - Targeting comment reply thread for comment_id: 4427610134221968
+2026-06-24 11:26:38,347 - comment_worker - INFO - Found comment container with selector: div[role="article"]:has(a[href*="4427610134221968"])
+2026-06-24 11:26:38,359 - comment_worker - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 11:26:42,013 - comment_worker - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 11:26:55,538 - comment_worker - INFO - Successfully posted comment for lead 33
+2026-06-24 11:26:55,538 - comment_worker - INFO - Posting comment for lead 30: https://www.facebook.com/groups/2021962444786761/user/100012634509143/?__cft__[0]=AZYuKz4jAY_ZhAyu1VwA5PriykoOg2ktgD2WCN-6l1eMiaBj8Yfy2mb0Lx91wW2prE2vp2bugH3-aSyoDCZ3loHqeSAgp5JRCe9Mav84HUsxYkW7TNqx6umrDIjKXA0F_dOsAc1K_W0zbBUZgPkG2gHMsgSlILwLkT_Xy1EGcRPHX2eFn74q4oh30-ivrAwVz_Bpq440LQVnLllRt_oUmvhLN2drkPCyNsqimImPY-ZUfA&__tn__=R-R
+2026-06-24 11:26:55,538 - comment_worker - WARNING - Skipping lead 30 due to invalid post URL: https://www.facebook.com/groups/2021962444786761/user/100012634509143/?__cft__[0]=AZYuKz4jAY_ZhAyu1VwA5PriykoOg2ktgD2WCN-6l1eMiaBj8Yfy2mb0Lx91wW2prE2vp2bugH3-aSyoDCZ3loHqeSAgp5JRCe9Mav84HUsxYkW7TNqx6umrDIjKXA0F_dOsAc1K_W0zbBUZgPkG2gHMsgSlILwLkT_Xy1EGcRPHX2eFn74q4oh30-ivrAwVz_Bpq440LQVnLllRt_oUmvhLN2drkPCyNsqimImPY-ZUfA&__tn__=R-R
+2026-06-24 11:26:55,591 - comment_worker - INFO - Posting comment for lead 30: https://www.facebook.com/groups/2021962444786761/user/100012634509143/?__cft__[0]=AZYuKz4jAY_ZhAyu1VwA5PriykoOg2ktgD2WCN-6l1eMiaBj8Yfy2mb0Lx91wW2prE2vp2bugH3-aSyoDCZ3loHqeSAgp5JRCe9Mav84HUsxYkW7TNqx6umrDIjKXA0F_dOsAc1K_W0zbBUZgPkG2gHMsgSlILwLkT_Xy1EGcRPHX2eFn74q4oh30-ivrAwVz_Bpq440LQVnLllRt_oUmvhLN2drkPCyNsqimImPY-ZUfA&__tn__=R-R
+2026-06-24 11:26:55,591 - comment_worker - WARNING - Skipping lead 30 due to invalid post URL: https://www.facebook.com/groups/2021962444786761/user/100012634509143/?__cft__[0]=AZYuKz4jAY_ZhAyu1VwA5PriykoOg2ktgD2WCN-6l1eMiaBj8Yfy2mb0Lx91wW2prE2vp2bugH3-aSyoDCZ3loHqeSAgp5JRCe9Mav84HUsxYkW7TNqx6umrDIjKXA0F_dOsAc1K_W0zbBUZgPkG2gHMsgSlILwLkT_Xy1EGcRPHX2eFn74q4oh30-ivrAwVz_Bpq440LQVnLllRt_oUmvhLN2drkPCyNsqimImPY-ZUfA&__tn__=R-R
+2026-06-24 11:26:55,693 - comment_worker - INFO - Posting comment for lead 30: https://www.facebook.com/groups/2021962444786761/user/100012634509143/?__cft__[0]=AZYuKz4jAY_ZhAyu1VwA5PriykoOg2ktgD2WCN-6l1eMiaBj8Yfy2mb0Lx91wW2prE2vp2bugH3-aSyoDCZ3loHqeSAgp5JRCe9Mav84HUsxYkW7TNqx6umrDIjKXA0F_dOsAc1K_W0zbBUZgPkG2gHMsgSlILwLkT_Xy1EGcRPHX2eFn74q4oh30-ivrAwVz_Bpq440LQVnLllRt_oUmvhLN2drkPCyNsqimImPY-ZUfA&__tn__=R-R
+2026-06-24 11:26:55,694 - comment_worker - WARNING - Skipping lead 30 due to invalid post URL: https://www.facebook.com/groups/2021962444786761/user/100012634509143/?__cft__[0]=AZYuKz4jAY_ZhAyu1VwA5PriykoOg2ktgD2WCN-6l1eMiaBj8Yfy2mb0Lx91wW2prE2vp2bugH3-aSyoDCZ3loHqeSAgp5JRCe9Mav84HUsxYkW7TNqx6umrDIjKXA0F_dOsAc1K_W0zbBUZgPkG2gHMsgSlILwLkT_Xy1EGcRPHX2eFn74q4oh30-ivrAwVz_Bpq440LQVnLllRt_oUmvhLN2drkPCyNsqimImPY-ZUfA&__tn__=R-R
+2026-06-24 11:26:55,781 - comment_worker - ERROR - Failed to post comment for lead 30
+2026-06-24 11:26:55,781 - comment_worker - INFO - Posting comment for lead 28: https://www.facebook.com/groups/2021962444786761/user/100001678520555/?__cft__[0]=AZYszcql02njS4Vi5YEzXPxkIXFht0SHYFqPplw9z8In4TB_PpVRf4d0oYiIHfQ1BolVYzK5RTXq-aMdH569Qk2SOvrPbeSKl1ROrkxCllqEcjPvkmlpnb4K9Gi_N9OwJIXHygZqe-SUwuRyZnU3Pk8p0nWVOpF6h-ILEVVPOlMqlbG1N-1fh_wyMRtTxhMfaMg&__tn__=R-R
+2026-06-24 11:26:55,782 - comment_worker - WARNING - Skipping lead 28 due to invalid post URL: https://www.facebook.com/groups/2021962444786761/user/100001678520555/?__cft__[0]=AZYszcql02njS4Vi5YEzXPxkIXFht0SHYFqPplw9z8In4TB_PpVRf4d0oYiIHfQ1BolVYzK5RTXq-aMdH569Qk2SOvrPbeSKl1ROrkxCllqEcjPvkmlpnb4K9Gi_N9OwJIXHygZqe-SUwuRyZnU3Pk8p0nWVOpF6h-ILEVVPOlMqlbG1N-1fh_wyMRtTxhMfaMg&__tn__=R-R
+2026-06-24 11:26:55,828 - comment_worker - INFO - Posting comment for lead 28: https://www.facebook.com/groups/2021962444786761/user/100001678520555/?__cft__[0]=AZYszcql02njS4Vi5YEzXPxkIXFht0SHYFqPplw9z8In4TB_PpVRf4d0oYiIHfQ1BolVYzK5RTXq-aMdH569Qk2SOvrPbeSKl1ROrkxCllqEcjPvkmlpnb4K9Gi_N9OwJIXHygZqe-SUwuRyZnU3Pk8p0nWVOpF6h-ILEVVPOlMqlbG1N-1fh_wyMRtTxhMfaMg&__tn__=R-R
+2026-06-24 11:26:55,828 - comment_worker - WARNING - Skipping lead 28 due to invalid post URL: https://www.facebook.com/groups/2021962444786761/user/100001678520555/?__cft__[0]=AZYszcql02njS4Vi5YEzXPxkIXFht0SHYFqPplw9z8In4TB_PpVRf4d0oYiIHfQ1BolVYzK5RTXq-aMdH569Qk2SOvrPbeSKl1ROrkxCllqEcjPvkmlpnb4K9Gi_N9OwJIXHygZqe-SUwuRyZnU3Pk8p0nWVOpF6h-ILEVVPOlMqlbG1N-1fh_wyMRtTxhMfaMg&__tn__=R-R
+2026-06-24 11:26:55,894 - comment_worker - INFO - Posting comment for lead 28: https://www.facebook.com/groups/2021962444786761/user/100001678520555/?__cft__[0]=AZYszcql02njS4Vi5YEzXPxkIXFht0SHYFqPplw9z8In4TB_PpVRf4d0oYiIHfQ1BolVYzK5RTXq-aMdH569Qk2SOvrPbeSKl1ROrkxCllqEcjPvkmlpnb4K9Gi_N9OwJIXHygZqe-SUwuRyZnU3Pk8p0nWVOpF6h-ILEVVPOlMqlbG1N-1fh_wyMRtTxhMfaMg&__tn__=R-R
+2026-06-24 11:26:55,894 - comment_worker - WARNING - Skipping lead 28 due to invalid post URL: https://www.facebook.com/groups/2021962444786761/user/100001678520555/?__cft__[0]=AZYszcql02njS4Vi5YEzXPxkIXFht0SHYFqPplw9z8In4TB_PpVRf4d0oYiIHfQ1BolVYzK5RTXq-aMdH569Qk2SOvrPbeSKl1ROrkxCllqEcjPvkmlpnb4K9Gi_N9OwJIXHygZqe-SUwuRyZnU3Pk8p0nWVOpF6h-ILEVVPOlMqlbG1N-1fh_wyMRtTxhMfaMg&__tn__=R-R
+2026-06-24 11:26:56,060 - comment_worker - ERROR - Failed to post comment for lead 28
+2026-06-24 11:26:56,060 - comment_worker - INFO - Posting comment for lead 48: https://www.facebook.com/groups/2021962444786761/posts/4420361184946863/?comment_id=4425338377782477&__cft__[0]=AZbsxlA0igOyEZLyptwhkCFz2GZRA9CxlpFK9r-uiiQkWnrOWcC2j7Yr9t2GX2vHB6xER74Dg2E4Ka3392SjkENMPCwf7JLAUp-iaIp_q08N5Bp1GbThUf_zghQRpH490cfc5X9WX4us-SZcRg2qbSOZ1fdORvixsD0lMZlZYQeypX0yTWLwvSotQDk2K0gCvCQDY5S0Pf4v_ZwoPoBJ2cMV&__tn__=R-R
+2026-06-24 11:27:01,737 - comment_worker - INFO - Targeting comment reply thread for comment_id: 4425338377782477
+2026-06-24 11:27:11,775 - comment_worker - INFO - Found comment container with selector: div[role="article"]:has(a[href*="4425338377782477"])
+2026-06-24 11:27:11,790 - comment_worker - INFO - Found Reply button with selector: div[role="button"]:has-text("Reply")
+2026-06-24 11:27:15,424 - comment_worker - INFO - Found reply input box globally: div[role="textbox"][aria-label*="Reply"]
+2026-06-24 11:27:28,097 - comment_worker - INFO - Successfully posted comment for lead 48
+2026-06-24 11:27:28,097 - comment_worker - INFO - Posting comment for lead 47: https://www.facebook.com/groups/2021962444786761/posts/4425715537744761/?comment_id=4425878874395094&__cft__[0]=AZaWVXZNo3tbJ9UhIUqqKnBBG1Z2qeADF_8k_S6LnCcOUz5qktG_uJycw3NCRFGAf1JRAeZFFF8TJ9HvlFF-5UUwfFfp8m7iYyBmp6Z_piFPnDl8pP-HDYls4RNcXD8peK9jjlxQhZVVtgwcGBelq2ZESDwlEvyv1GLBj1wGPjc3UCW7fXWcrh33k7_UftQlGEXIh6C_0ToPkMnKDvYpkFWb&__tn__=R-R
+2026-06-24 11:27:33,672 - comment_worker - INFO - Targeting comment reply thread for comment_id: 4425878874395094

@@ -19,7 +19,7 @@ from database import (
     init_db, LeadDatabase, GroupDatabase, SettingsDatabase,
     DailyStatsDatabase, FollowUpDatabase, AuditLogDatabase, get_session
 )
-from models import Lead
+from models import Lead, AuditLog
 from analytics import Analytics
         # Ensure Date Formatting Inline !!!
 from content_generator import ContentGenerator
@@ -69,9 +69,6 @@ st.set_page_config(
 # Initialize database
 init_db()
 
-if "scanner" not in st.session_state:
-    st.session_state["scanner"] = FacebookScanner()
-
 # Custom CSS
 st.markdown("""
 <style>
@@ -104,8 +101,9 @@ with st.sidebar:
     )
     SettingsDatabase.set_setting("scan_use_groups", "true" if use_groups else "false")
     
-    scanner_state = st.session_state.get("scanner")
-    comment_worker_state = st.session_state.get("comment_worker")
+    # Retrieve scanner and worker states from class-level references
+    scanner_state = FacebookScanner._active_instance
+    comment_worker_state = CommentWorker._active_instance
     
     if "fb_login_running" not in st.session_state:
         st.session_state["fb_login_running"] = False
@@ -141,41 +139,58 @@ with st.sidebar:
         if st.button("Start Scanner"):
             SettingsDatabase.set_setting("scan_enabled", "true")
             SettingsDatabase.set_setting("debug_visible_browser", "true")
-            if scanner_state and not scanner_state.running:
+            if not scanner_state:
                 try:
+                    scanner_state = FacebookScanner()
                     scanner_state.start()
                     st.success("Scanner started.")
+                    st.rerun()
                 except Exception as e:
                     st.error(f"Could not start scanner: {e}")
             else:
                 st.warning("Scanner is already running.")
     with col2:
         if st.button("Stop Scanner"):
-            if scanner_state and scanner_state.running:
+            if scanner_state:
                 scanner_state.stop()
-                st.session_state.pop("scanner", None)
                 st.warning("Scanner stopped.")
+                st.rerun()
             else:
                 st.info("Scanner is not running.")
+    
+    if scanner_state:
+        st.caption("🟢 Scanner status: running")
+    else:
+        st.caption("🔴 Scanner status: stopped")
+    
+    st.write("") # spacing
     
     col1, col2 = st.columns(2)
     with col1:
         if st.button("Start Comment Worker"):
             if not comment_worker_state:
-                comment_worker_state = CommentWorker()
-                st.session_state["comment_worker"] = comment_worker_state
-                Thread(target=comment_worker_state.start, daemon=True).start()
-                st.success("Comment worker started.")
+                try:
+                    comment_worker_state = CommentWorker()
+                    Thread(target=comment_worker_state.start, daemon=True).start()
+                    st.success("Comment worker started.")
+                    st.rerun()
+                except Exception as e:
+                    st.error(f"Could not start comment worker: {e}")
             else:
                 st.warning("Comment worker is already running.")
     with col2:
         if st.button("Stop Comment Worker"):
-            if comment_worker_state and comment_worker_state.running:
+            if comment_worker_state:
                 comment_worker_state.stop()
-                st.session_state.pop("comment_worker", None)
                 st.warning("Comment worker stopped.")
+                st.rerun()
             else:
                 st.info("Comment Worker is not running.")
+                
+    if comment_worker_state:
+        st.caption("🟢 Comment Worker status: running")
+    else:
+        st.caption("🔴 Comment Worker status: stopped")
     
     # Posting Controls
     st.subheader("💬 Posting Controls")
@@ -188,6 +203,17 @@ with st.sidebar:
         if st.button("⏸️ Disable Posting", use_container_width=True):
             SettingsDatabase.set_setting("posting_enabled", "false")
             st.warning("Auto-posting disabled")
+            
+    # Auto Comment Toggle (default: checked/enabled)
+    auto_comment_default = SettingsDatabase.get_setting("auto_comment_enabled", "true").lower() == "true"
+    auto_comment_checkbox = st.checkbox(
+        "🤖 Auto Comment",
+        value=auto_comment_default,
+        help="If enabled, newly scanned leads will be automatically approved and queued for posting."
+    )
+    if auto_comment_checkbox != auto_comment_default:
+        SettingsDatabase.set_setting("auto_comment_enabled", "true" if auto_comment_checkbox else "false")
+        st.rerun()
     
     st.divider()
     
@@ -249,6 +275,7 @@ tabs = st.tabs([
     "✅ Approved",
     "❌ Rejected",
     "📤 Posted",
+    "🤖 Auto-posted",
     "📋 Follow-ups",
     "📊 Analytics",
     "🔍 All Leads",
@@ -480,63 +507,119 @@ with tabs[2]:
         st.info("No high value leads yet")
 
 
-# Tab 4-7: Other status tabs
+# Tab 4-6: Other status tabs
 status_tabs = [
     ("✅ Approved", "APPROVED"),
     ("❌ Rejected", "REJECTED"),
-    ("📤 Posted", "POSTED"),
-    ("📋 Follow-ups", "FOLLOW_UP")
+    ("📤 Posted", "POSTED")
 ]
 
 for tab_idx, (tab_name, status) in enumerate(status_tabs, start=3):
     with tabs[tab_idx]:
         st.subheader(f"{tab_name} Leads")
         
-        if status == "FOLLOW_UP":
-            # Special handling for follow-ups
-            followups = FollowUpDatabase.get_upcoming_followups()
-            if followups:
-                df_data = []
-                for fu in followups:
-                    df_data.append({
-                        "Lead": fu.lead.author,
-                        "Date": fu.followup_date,
-                        "Note": fu.note,
-                        "Completed": fu.completed
-                    })
-                df = pd.DataFrame(df_data)
-                st.dataframe(df, use_container_width=True)
-            else:
-                st.info("No upcoming follow-ups")
+        leads = LeadDatabase.get_leads_by_status(status)
+        if leads:
+            df_data = []
+            for lead in leads:
+                df_data.append({
+                    "Author": lead.author,
+                    "Group": lead.group_name,
+                    "Destination": lead.destination or "N/A",
+                    "Score": lead.lead_score,
+                    "Intent": lead.intent,
+                    "Created": lead.created_at.strftime("%Y-%m-%d %H:%M")
+                })
+            
+            df = pd.DataFrame(df_data)
+            st.dataframe(df, use_container_width=True)
+            
+            csv = df.to_csv(index=False)
+            st.download_button(
+                label="📥 Download CSV",
+                data=csv,
+                file_name=f"leads_{status.lower()}_{date.today()}.csv",
+                mime="text/csv"
+            )
         else:
-            leads = LeadDatabase.get_leads_by_status(status)
-            if leads:
-                df_data = []
-                for lead in leads:
-                    df_data.append({
-                        "Author": lead.author,
-                        "Group": lead.group_name,
-                        "Destination": lead.destination or "N/A",
-                        "Score": lead.lead_score,
-                        "Intent": lead.intent,
-                        "Created": lead.created_at.strftime("%Y-%m-%d %H:%M")
-                    })
+            st.info(f"No {status.lower()} leads yet")
+
+# Tab 7: Auto-posted
+with tabs[6]:
+    st.subheader("🤖 Auto-posted Comments for Review")
+    st.write("These leads were automatically approved and posted by the AI agent.")
+    
+    session = get_session()
+    try:
+        # Query leads with status "POSTED" that have an "AUTO_APPROVED" audit log entry
+        auto_posted_leads = session.query(Lead).join(Lead.audit_logs).filter(
+            Lead.status == "POSTED",
+            AuditLog.action == "AUTO_APPROVED"
+        ).order_by(Lead.updated_at.desc()).all()
+    finally:
+        session.close()
+
+    if auto_posted_leads:
+        st.write(f"Showing {len(auto_posted_leads)} auto-posted leads awaiting review.")
+        
+        for lead in auto_posted_leads:
+            with st.expander(f"**{lead.author}** - {lead.destination or 'N/A'} (Score: {lead.lead_score}/10)"):
+                col1, col2 = st.columns([2, 1])
                 
-                df = pd.DataFrame(df_data)
-                st.dataframe(df, use_container_width=True)
+                with col1:
+                    st.write(f"**Group:** {lead.group_name}")
+                    st.write(f"**Post:** {lead.post_text}")
+                    st.write(f"**Intent:** {lead.intent}")
+                    st.write(f"**Travel Date:** {lead.travel_date or 'Not mentioned'}")
+                    st.write(f"**Group Size:** {lead.group_size or 'Not mentioned'}")
+                    st.write(f"**Budget:** {lead.budget or 'Not mentioned'}")
+                    st.write(f"**Reason for Score:** {lead.reason}")
+                    st.write(f"**Post:** [View on Facebook]({lead.post_url})")
+                    st.write("---")
+                    st.write(f"**Posted Reply:**\n{lead.suggested_reply}")
                 
-                csv = df.to_csv(index=False)
-                st.download_button(
-                    label="📥 Download CSV",
-                    data=csv,
-                    file_name=f"leads_{status.lower()}_{date.today()}.csv",
-                    mime="text/csv"
-                )
-            else:
-                st.info(f"No {status.lower()} leads yet")
+                with col2:
+                    st.write("**Actions**")
+                    if st.button("✅ Reviewed / Closed", key=f"close_auto_{lead.id}", use_container_width=True):
+                        LeadDatabase.update_lead(lead.id, status="CLOSED")
+                        AuditLogDatabase.log_action(lead.id, "CLOSED", "Marked as reviewed & closed from auto-posted tab")
+                        st.success("Lead marked as closed!")
+                        st.rerun()
+                        
+                    # Follow-up form
+                    st.write("---")
+                    st.write("**Flag for Follow-up**")
+                    fu_date = st.date_input("Follow-up Date", value=date.today() + timedelta(days=2), key=f"fu_date_{lead.id}")
+                    fu_note = st.text_input("Follow-up Note", value="Check reply and user engagement", key=f"fu_note_{lead.id}")
+                    if st.button("🚩 Save & Flag", key=f"flag_auto_{lead.id}", use_container_width=True):
+                        LeadDatabase.update_lead(lead.id, status="FOLLOW_UP")
+                        FollowUpDatabase.create_followup(lead.id, fu_date, fu_note)
+                        AuditLogDatabase.log_action(lead.id, "FOLLOW_UP", f"Flagged for follow-up on {fu_date}: {fu_note}")
+                        st.success("Lead flagged for follow-up!")
+                        st.rerun()
+    else:
+        st.info("No auto-posted leads awaiting review.")
+
+# Tab 8: Follow-ups
+with tabs[7]:
+    st.subheader("📋 Follow-up Leads")
+    followups = FollowUpDatabase.get_upcoming_followups()
+    if followups:
+        df_data = []
+        for fu in followups:
+            df_data.append({
+                "Lead": fu.lead.author,
+                "Date": fu.followup_date,
+                "Note": fu.note,
+                "Completed": fu.completed
+            })
+        df = pd.DataFrame(df_data)
+        st.dataframe(df, use_container_width=True)
+    else:
+        st.info("No upcoming follow-ups")
 
 # Tab 8: Analytics
-with tabs[7]:
+with tabs[8]:
     st.subheader("📊 Analytics & Insights")
     
     # Top destinations
@@ -575,7 +658,7 @@ with tabs[7]:
         st.dataframe(df, use_container_width=True)
 
 # Tab 9: All Leads
-with tabs[8]:
+with tabs[9]:
     st.subheader("🔍 All Leads - Advanced Search")
     
     col1, col2, col3, col4 = st.columns(4)
@@ -728,7 +811,7 @@ with tabs[8]:
         st.info("No leads found matching criteria")
 
 # Tab 10: Content
-with tabs[9]:
+with tabs[10]:
     st.subheader("📝 Content Generation")
     
     col1, col2 = st.columns([2, 1])

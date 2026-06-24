@@ -51,7 +51,10 @@ class LeadScorer:
             }
         """
         
-        prompt = f"""Analyze this Facebook post from a travel perspective. Extract information and score it as a potential lead for a travel company (Sikkim Tours & Cabs).Sikkim Tours & Cabs only plans for Tours in Sikkim, Siliguri, Darjeeling, Kalimpong areas.
+        prompt = f"""Analyze this Facebook post from a travel perspective. Extract information and score it as a potential lead for a travel company (Sikkim Tours & Cabs).
+
+Sikkim Tours & Cabs serves the Sikkim and North Bengal regions. This includes but is not limited to: Sikkim, Gangtok, Darjeeling, Kalimpong, Siliguri, NJP (New Jalpaiguri), Bagdogra, Dooars, Pelling, Ravangla, Namchi, Lachen, Lachung, Yumthang Valley, Gurudongmar Lake, Zuluk, Changu (Tsomgo) Lake, Nathula Pass, etc.
+Note: The post text may contain typos, abbreviations, or spelling variations of these destinations (e.g. 'Sikim', 'Dajeeling', 'Gantok', 'Lachun', 'Peling', etc.). You must identify them and extract the correct destination name. If the query is about any location in Sikkim or North Bengal, score it as a lead. If it is about other areas (e.g. Ladakh, Kerala, Goa, etc.), score it as 0 (not a lead).
 
 POST AUTHOR: {author}
 POST TEXT:

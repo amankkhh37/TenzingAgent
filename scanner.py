@@ -22,7 +22,7 @@ from logger import scanner_logger
 class FacebookScanner:
     """Continuously scan Facebook groups for travel leads"""
     _instance_lock = threading.Lock()
-    _active_instance_id: Optional[int] = None
+    _active_instance = None
     
     def __init__(self):
         self.running = False
@@ -42,12 +42,11 @@ class FacebookScanner:
                 scanner_logger.warning("Scanner already running")
                 return
 
-            active_id = self.__class__._active_instance_id
-            if active_id is not None and active_id != id(self):
+            if self.__class__._active_instance is not None and self.__class__._active_instance != self:
                 scanner_logger.warning("Another scanner instance is already running; start request ignored")
                 return
 
-            self.__class__._active_instance_id = id(self)
+            self.__class__._active_instance = self
         
         self.running = True
         self.scan_thread = threading.Thread(target=self._scan_loop, daemon=False)
@@ -60,8 +59,8 @@ class FacebookScanner:
         if self.scan_thread:
             self.scan_thread.join(timeout=10)
         with self.__class__._instance_lock:
-            if self.__class__._active_instance_id == id(self):
-                self.__class__._active_instance_id = None
+            if self.__class__._active_instance == self:
+                self.__class__._active_instance = None
         scanner_logger.info("Scanner stopped")
 
     def _sleep_until_stopped(self, seconds: int) -> None:
@@ -99,6 +98,9 @@ class FacebookScanner:
                         scanner_logger.info("Group scan mode disabled. Scanning Facebook home/current feed")
                         self._scan_home_feed()
                     
+                    # Close browser after the scan cycle is complete to release profile lock
+                    self._close_browser()
+                    
                     # Sleep before next scan
                     scanner_logger.info(f"Scan complete, sleeping for {SCAN_INTERVAL} seconds")
                     self._sleep_until_stopped(SCAN_INTERVAL)
@@ -109,8 +111,8 @@ class FacebookScanner:
         finally:
             self._close_browser()
             with self.__class__._instance_lock:
-                if self.__class__._active_instance_id == id(self):
-                    self.__class__._active_instance_id = None
+                if self.__class__._active_instance == self:
+                    self.__class__._active_instance = None
     
     def _get_group_urls(self) -> List[str]:
         """Get enabled group URLs from database and config"""
@@ -351,7 +353,6 @@ class FacebookScanner:
                         if LeadDatabase.get_lead_by_post_id(post_data.get("post_id", "")):
                             scanner_logger.debug(f"Duplicate post skipped: {post_data.get('post_id')}")
                             continue
-                        
                         # Score the post
                         analysis = self.lead_scorer.analyze_post(post_data["post_text"], post_data["author"])
                         if not analysis:
@@ -377,34 +378,39 @@ class FacebookScanner:
                             "post_id": post_data.get("post_id"),
                             "author": post_data["author"],
                             "author_profile": post_data.get("author_profile", ""),
-                            "group_id": group.id,
+                            "group_id": group_id,
                             "group_name": group_name,
                             "post_text": post_data["post_text"],
-                            "post_url": post_data["post_url"],
-                            "destination": analysis.get("destination"),
-                            "travel_date": analysis.get("travel_date"),
-                            "group_size": analysis.get("group_size"),
-                            "budget": analysis.get("budget"),
-                            "intent": analysis.get("classification"),
+                            "post_url": post_data.get("post_url", ""),
+                            "destination": analysis.get("destination", "Not mentioned"),
+                            "travel_date": analysis.get("travel_date", "Not mentioned"),
+                            "group_size": analysis.get("group_size", "Not mentioned"),
+                            "budget": analysis.get("budget", "Not mentioned"),
+                            "intent": analysis.get("classification", "Not A Lead"),
                             "lead_score": analysis.get("lead_score", 0),
-                            "reason": analysis.get("reason"),
+                            "reason": analysis.get("reason", ""),
                             "suggested_reply": suggested_reply,
-                            "status": "NEW"
+                            "status": "APPROVED" if SettingsDatabase.get_setting("auto_comment_enabled", "true").lower() == "true" else "NEW"
                         }
                         
-                        lead = LeadDatabase.create_lead(lead_data)
-                        if lead:
+                        new_lead = LeadDatabase.create_lead(lead_data)
+                        if new_lead:
                             leads_found += 1
-                            AuditLogDatabase.log_action(lead.id, "CREATED", f"Auto-discovered in group: {group_name}")
-                            DailyStatsDatabase.update_stats(leads_found=1)
+                            AuditLogDatabase.log_action(new_lead.id, "CREATED", "Discovered via Facebook scan")
                             
-                            # Update daily stats by score
-                            if analysis.get("lead_score", 0) >= 8:
-                                DailyStatsDatabase.update_stats(leads_high_value=1)
-                    
+                            stats_update = {"leads_found": 1}
+                            if new_lead.status == "APPROVED":
+                                AuditLogDatabase.log_action(new_lead.id, "AUTO_APPROVED", "Automatically approved based on settings")
+                                stats_update["approvals"] = 1
+                            
+                            if (analysis.get("lead_score") or 0) >= 8:
+                                stats_update["leads_high_value"] = 1
+                                
+                            DailyStatsDatabase.update_stats(**stats_update)
+                            scanner_logger.info(f"Saved new lead {new_lead.id} from {new_lead.author} (status: {new_lead.status})")
+                            
                     except Exception as e:
-                        scanner_logger.debug(f"Error processing post: {e}")
-                        continue
+                        scanner_logger.error(f"Error processing post in group {group_url}: {e}")
                 
                 # Scroll for more posts
                 if scroll_count < MAX_SCROLLS - 1:
@@ -422,9 +428,10 @@ class FacebookScanner:
             )
             
             scanner_logger.info(f"Group '{group_name}': {posts_found} posts, {leads_found} leads found")
-        
+            
         except Exception as e:
             scanner_logger.error(f"Error scanning group {group_url}: {e}")
+            
     
     def _extract_post_data(self, post_elem, group_name: str, group_url: str, group_id: int) -> Optional[dict]:
         """Extract data from a post element"""
@@ -462,15 +469,57 @@ class FacebookScanner:
                     break
             
             # Extract post URL
-            url_elem = post_elem.query_selector('a[href*="/posts/"], a[href*="/groups/"]')
             post_url = ""
-            if url_elem:
-                post_url = url_elem.get_attribute("href") or ""
-                if post_url and not post_url.startswith("http"):
-                    post_url = f"https://www.facebook.com{post_url}"
+            all_links = post_elem.query_selector_all('a')
+            hrefs = []
+            for link in all_links:
+                href = link.get_attribute("href") or ""
+                if href:
+                    if not href.startswith("http"):
+                        href = f"https://www.facebook.com{href}"
+                    hrefs.append(href)
             
-            # Generate post ID from URL
-            post_id = post_url.split("/")[-1] if post_url else f"{group_id}_{int(time.time())}"
+            # 1. First priority: look for direct post/permalink links
+            for href in hrefs:
+                if any(x in href for x in ["/posts/", "/permalink/", "story_fbid", "permalink.php", "story.php", "/multi_permalinks/"]):
+                    post_url = href
+                    break
+            
+            # 2. Second priority: look for general group links, but exclude user profile links or group main page links
+            if not post_url:
+                for href in hrefs:
+                    if "/groups/" in href and "/user/" not in href:
+                        norm_href = href.split("?")[0].rstrip("/")
+                        norm_group_url = group_url.split("?")[0].rstrip("/")
+                        if norm_href != norm_group_url:
+                            post_url = href
+                            break
+                            
+            if not post_url and hrefs:
+                # Fallback to first link as last resort
+                post_url = hrefs[0]
+            
+            # Extract clean post_id from post_url
+            post_id = ""
+            if post_url:
+                from urllib.parse import urlparse, parse_qs
+                try:
+                    parsed = urlparse(post_url)
+                    queries = parse_qs(parsed.query)
+                    
+                    if "story_fbid" in queries:
+                        post_id = queries["story_fbid"][0]
+                    elif "fbid" in queries:
+                        post_id = queries["fbid"][0]
+                    else:
+                        path_parts = [p for p in parsed.path.split("/") if p]
+                        if path_parts:
+                            post_id = path_parts[-1]
+                except Exception as ex:
+                    scanner_logger.debug(f"Error parsing post ID from URL {post_url}: {ex}")
+            
+            if not post_id:
+                post_id = f"{group_id}_{int(time.time())}"
             
             return {
                 "post_id": post_id,

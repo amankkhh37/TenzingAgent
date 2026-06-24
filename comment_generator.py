@@ -66,6 +66,7 @@ Generate a SHORT, helpful comment that:
 ✓ Shows local knowledge
 ✓ Encourages them to ask more questions
 ✓ Builds trust and credibility
+✓ ALWAYS naturally includes our website link, https://sikkimtourandcabs.in/, suggesting it for cab booking, itinerary planning, or checking local rates (e.g. 'You can check local cab rates or itineraries at https://sikkimtourandcabs.in/').
 
 ✗ NEVER include these phrases:
   - "Book now"
@@ -75,7 +76,7 @@ Generate a SHORT, helpful comment that:
   - "Message us"
   - "Call us"
   - "Reserve now"
-  - Marketing language or emojis
+  - Marketing language, phone numbers, email addresses, or spammy emojis (the only URL allowed and required is https://sikkimtourandcabs.in/)
 
 Instead, use conversational phrases like:
 - "If you're considering..."
@@ -85,9 +86,9 @@ Instead, use conversational phrases like:
 - "The best way to..."
 
 Example good replies:
-- "If you're traveling with family, a reserved cab is often more comfortable than shared transport. The roads to Tsomgo are winding though, so pace yourself."
-- "Gangtok in October is beautiful. You might want to visit Rumtek Monastery early morning before crowds. Have you arranged local travel?"
-- "The Silk Route drive through Zuluk is incredible. Make sure you're comfortable with hairpin bends!"
+- "If you're traveling with family, a reserved cab is often more comfortable than shared transport. The roads to Tsomgo are winding, so pacing yourself is key. You can check routes and check rates at https://sikkimtourandcabs.in/."
+- "Gangtok in October is beautiful. You might want to visit Rumtek Monastery early morning before crowds. Have you arranged local travel? Feel free to plan your itinerary at https://sikkimtourandcabs.in/."
+- "The Silk Route drive through Zuluk is incredible. Make sure you're comfortable with hairpin bends! For cab bookings and itinerary assistance, check out https://sikkimtourandcabs.in/."
 
 Generate ONE natural comment (2-4 sentences max):{tip}"""
         
@@ -114,14 +115,14 @@ Generate ONE natural comment (2-4 sentences max):{tip}"""
         """Generate a safe, template-based reply if LLM fails"""
         
         safe_replies = {
-            "cab_service": f"If you're planning to explore {destination or 'the region'}, having a reserved cab makes it much more comfortable. The roads can be winding, so you'd be in good hands.",
-            "travel_package": f"The travel packages to {destination or 'Sikkim'} can be customized based on what interests you most. Have you thought about which attractions are must-visits?",
-            "accommodation": f"{destination or 'Sikkim'} has great accommodation options depending on your budget and preferences. What kind of experience are you looking for?",
-            "travel_planning": f"{destination or 'The region'} has so much to offer. The best time to visit depends on what you want to see. Feel free to ask for specific route suggestions.",
-            "family_travel": f"Family trips to {destination or 'the region'} are amazing. You'll want comfortable transport and family-friendly stops along the way.",
-            "couple_travel": f"A couple's getaway in {destination or 'Sikkim'} can be really romantic. The mountain views are especially beautiful at sunrise.",
-            "honeymoon": f"Honeymoons in {destination or 'Sikkim'} are special. Many couples enjoy the scenic drives and peaceful mountain retreats.",
-            "general_discussion": f"Interesting point about {destination or 'travel in Sikkim'}. The local culture and natural beauty really stand out."
+            "cab_service": f"If you're planning to explore {destination or 'the region'}, having a reserved cab makes it much more comfortable. You can book cabs and check rates at https://sikkimtourandcabs.in/.",
+            "travel_package": f"The travel packages to {destination or 'Sikkim'} can be customized based on what interests you most. Feel free to explore itineraries at https://sikkimtourandcabs.in/.",
+            "accommodation": f"{destination or 'Sikkim'} has great accommodation options depending on your budget. For local travel plans and cab bookings, check https://sikkimtourandcabs.in/.",
+            "travel_planning": f"{destination or 'The region'} has so much to offer. You can plan your specific routes and check travel options at https://sikkimtourandcabs.in/.",
+            "family_travel": f"Family trips to {destination or 'the region'} are amazing. You can book a comfortable family cab and plan your stops at https://sikkimtourandcabs.in/.",
+            "couple_travel": f"A couple's getaway in {destination or 'Sikkim'} can be really romantic. The mountain views are beautiful. Check out travel itineraries at https://sikkimtourandcabs.in/.",
+            "honeymoon": f"Honeymoons in {destination or 'Sikkim'} are special. Many couples enjoy scenic drives. Feel free to plan your tour at https://sikkimtourandcabs.in/.",
+            "general_discussion": f"Interesting point about {destination or 'travel in Sikkim'}. You can explore regional tour guidelines and cab routes at https://sikkimtourandcabs.in/."
         }
         
-        return safe_replies.get(intent, f"Sounds like an exciting trip! Have you sorted out your travel logistics for {destination or 'the region'}?")
+        return safe_replies.get(intent, f"Sounds like an exciting trip! You can sort out your travel logistics and cab bookings at https://sikkimtourandcabs.in/.")
